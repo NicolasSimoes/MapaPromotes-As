@@ -1,0 +1,5313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d683966226d3ad3ecb00d5a373f77802 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d683966226d3ad3ecb00d5a373f77802" ></div>
+        
+    
+  <div style="position: fixed; top: 10px; right: 130px; z-index:9999;">
+    <button onclick="uncheckAll()" style="padding:5px 10px;">
+      Desmarcar Todas
+    </button>
+  </div>
+  <script>
+    function uncheckAll(){
+      var inputs = document.getElementsByClassName('leaflet-control-layers-selector');
+      for(var i=0; i<inputs.length; i++){
+        if(inputs[i].checked){
+          inputs[i].click();
+        }
+      }
+    }
+  </script>
+</body>
+<script>
+    
+    
+            var map_d683966226d3ad3ecb00d5a373f77802 = L.map(
+                "map_d683966226d3ad3ecb00d5a373f77802",
+                {
+                    center: [-3.777200916993086, -38.53518803999291],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a7200a3b0ce2df18d59a956443f5981a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a7200a3b0ce2df18d59a956443f5981a.addTo(map_d683966226d3ad3ecb00d5a373f77802);
+        
+    
+            var feature_group_4ba38bd3c8975d3e49c758bbf6d2cc8e = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_c077f065f99a7a1e3e6e991a06a6b49b = L.marker(
+                [-3.77778933, -38.59964399],
+                {
+}
+            ).addTo(feature_group_4ba38bd3c8975d3e49c758bbf6d2cc8e);
+        
+    
+            var icon_90cb07c469b30668748af4a55aee776d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9d50b7902077f7ed65b13a0b84f55e4e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_72918d6fffd95c0f6d679108bfcdc2ef = $(`<div id="html_72918d6fffd95c0f6d679108bfcdc2ef" style="width: 100.0%; height: 100.0%;">CENTERBOX - VITAL BRASIL</div>`)[0];
+                popup_9d50b7902077f7ed65b13a0b84f55e4e.setContent(html_72918d6fffd95c0f6d679108bfcdc2ef);
+            
+        
+
+        marker_c077f065f99a7a1e3e6e991a06a6b49b.bindPopup(popup_9d50b7902077f7ed65b13a0b84f55e4e)
+        ;
+
+        
+    
+    
+                marker_c077f065f99a7a1e3e6e991a06a6b49b.setIcon(icon_90cb07c469b30668748af4a55aee776d);
+            
+    
+            var marker_b697d9c0829e230d8bf3450a72f27598 = L.marker(
+                [-3.789045, -38.5864455],
+                {
+}
+            ).addTo(feature_group_4ba38bd3c8975d3e49c758bbf6d2cc8e);
+        
+    
+            var icon_9ced0cb97e26d1baaeaebd93a811fd62 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_475989511b28b66e910c141c7f8c34c4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_55ad526a57aa99c4a5f5cd8718b55b79 = $(`<div id="html_55ad526a57aa99c4a5f5cd8718b55b79" style="width: 100.0%; height: 100.0%;">COMETA (SIQUEIRA)</div>`)[0];
+                popup_475989511b28b66e910c141c7f8c34c4.setContent(html_55ad526a57aa99c4a5f5cd8718b55b79);
+            
+        
+
+        marker_b697d9c0829e230d8bf3450a72f27598.bindPopup(popup_475989511b28b66e910c141c7f8c34c4)
+        ;
+
+        
+    
+    
+                marker_b697d9c0829e230d8bf3450a72f27598.setIcon(icon_9ced0cb97e26d1baaeaebd93a811fd62);
+            
+    
+            var marker_1944b8e4c0f5ad66418f3d0c221cddd6 = L.marker(
+                [-3.8003218, -38.5880765],
+                {
+}
+            ).addTo(feature_group_4ba38bd3c8975d3e49c758bbf6d2cc8e);
+        
+    
+            var icon_5e66908f47cc464038210da779e7fe3b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_97258f9bf81c5b32584a80b529fa430d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a485e1940f8129c3d49eeeecbf3ddd86 = $(`<div id="html_a485e1940f8129c3d49eeeecbf3ddd86" style="width: 100.0%; height: 100.0%;">CENTERBOX - PRQ SAO JOSE</div>`)[0];
+                popup_97258f9bf81c5b32584a80b529fa430d.setContent(html_a485e1940f8129c3d49eeeecbf3ddd86);
+            
+        
+
+        marker_1944b8e4c0f5ad66418f3d0c221cddd6.bindPopup(popup_97258f9bf81c5b32584a80b529fa430d)
+        ;
+
+        
+    
+    
+                marker_1944b8e4c0f5ad66418f3d0c221cddd6.setIcon(icon_5e66908f47cc464038210da779e7fe3b);
+            
+    
+            var marker_1b7f7cf40a46118f5ec4b1ec0e18862d = L.marker(
+                [-3.8009513, -38.586656],
+                {
+}
+            ).addTo(feature_group_4ba38bd3c8975d3e49c758bbf6d2cc8e);
+        
+    
+            var icon_2d277550a75c707a7f530d5a0a2d98a6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b87f1d61f703c4624fe7101b2a708054 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa1f66986664a4031662ee8252cbbd2a = $(`<div id="html_aa1f66986664a4031662ee8252cbbd2a" style="width: 100.0%; height: 100.0%;">COMETA (WALDIR DIOGO)</div>`)[0];
+                popup_b87f1d61f703c4624fe7101b2a708054.setContent(html_aa1f66986664a4031662ee8252cbbd2a);
+            
+        
+
+        marker_1b7f7cf40a46118f5ec4b1ec0e18862d.bindPopup(popup_b87f1d61f703c4624fe7101b2a708054)
+        ;
+
+        
+    
+    
+                marker_1b7f7cf40a46118f5ec4b1ec0e18862d.setIcon(icon_2d277550a75c707a7f530d5a0a2d98a6);
+            
+    
+            var marker_3d30f0c7f962cb563d281f496347aa90 = L.marker(
+                [-3.8098495, -38.5743582],
+                {
+}
+            ).addTo(feature_group_4ba38bd3c8975d3e49c758bbf6d2cc8e);
+        
+    
+            var icon_5d1234ff9b8b93207782a7a792e6f871 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_29066757e92d30afaef31c030b986818 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d2698416503f0a90f00df276cc3e0a0f = $(`<div id="html_d2698416503f0a90f00df276cc3e0a0f" style="width: 100.0%; height: 100.0%;">PINHEIRO - MONDUBIM</div>`)[0];
+                popup_29066757e92d30afaef31c030b986818.setContent(html_d2698416503f0a90f00df276cc3e0a0f);
+            
+        
+
+        marker_3d30f0c7f962cb563d281f496347aa90.bindPopup(popup_29066757e92d30afaef31c030b986818)
+        ;
+
+        
+    
+    
+                marker_3d30f0c7f962cb563d281f496347aa90.setIcon(icon_5d1234ff9b8b93207782a7a792e6f871);
+            
+    
+            var marker_d33bc972ec0dbced13f567078ec174b7 = L.marker(
+                [-3.797637, -38.57033],
+                {
+}
+            ).addTo(feature_group_4ba38bd3c8975d3e49c758bbf6d2cc8e);
+        
+    
+            var icon_16e6fdd3058281d74181100fdb23d458 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b9178163079f769ef21a6657eb3af44a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6f0fa4fe4e19aadf0d79acb4e65702b4 = $(`<div id="html_6f0fa4fe4e19aadf0d79acb4e65702b4" style="width: 100.0%; height: 100.0%;">FRANGOLANDIA - MARAPONGA</div>`)[0];
+                popup_b9178163079f769ef21a6657eb3af44a.setContent(html_6f0fa4fe4e19aadf0d79acb4e65702b4);
+            
+        
+
+        marker_d33bc972ec0dbced13f567078ec174b7.bindPopup(popup_b9178163079f769ef21a6657eb3af44a)
+        ;
+
+        
+    
+    
+                marker_d33bc972ec0dbced13f567078ec174b7.setIcon(icon_16e6fdd3058281d74181100fdb23d458);
+            
+    
+            var marker_6a57610a025e48b3c1928100fe861d69 = L.marker(
+                [-3.79182527, -38.5671401],
+                {
+}
+            ).addTo(feature_group_4ba38bd3c8975d3e49c758bbf6d2cc8e);
+        
+    
+            var icon_90de8e5eae6f2f4dae2d4cfd68368bb6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0f9f811ffc1f6926d52ee6a286fac1aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3bd1cbc55a54fdbc7de6574b4c6c853f = $(`<div id="html_3bd1cbc55a54fdbc7de6574b4c6c853f" style="width: 100.0%; height: 100.0%;">COMETA (MARAPONGA)</div>`)[0];
+                popup_0f9f811ffc1f6926d52ee6a286fac1aa.setContent(html_3bd1cbc55a54fdbc7de6574b4c6c853f);
+            
+        
+
+        marker_6a57610a025e48b3c1928100fe861d69.bindPopup(popup_0f9f811ffc1f6926d52ee6a286fac1aa)
+        ;
+
+        
+    
+    
+                marker_6a57610a025e48b3c1928100fe861d69.setIcon(icon_90de8e5eae6f2f4dae2d4cfd68368bb6);
+            
+    
+            var marker_6c1b69130656afc81781dd8def629679 = L.marker(
+                [-3.7855748, -38.5667357],
+                {
+}
+            ).addTo(feature_group_4ba38bd3c8975d3e49c758bbf6d2cc8e);
+        
+    
+            var icon_21ce2faacba71dc68a6da10a46b47e42 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_94a9211353041d4b66de96279e8a5ee5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e5bdeea5ce7d88c211f31c5aaee66369 = $(`<div id="html_e5bdeea5ce7d88c211f31c5aaee66369" style="width: 100.0%; height: 100.0%;">PINHEIRO - MARAPONGA</div>`)[0];
+                popup_94a9211353041d4b66de96279e8a5ee5.setContent(html_e5bdeea5ce7d88c211f31c5aaee66369);
+            
+        
+
+        marker_6c1b69130656afc81781dd8def629679.bindPopup(popup_94a9211353041d4b66de96279e8a5ee5)
+        ;
+
+        
+    
+    
+                marker_6c1b69130656afc81781dd8def629679.setIcon(icon_21ce2faacba71dc68a6da10a46b47e42);
+            
+    
+            var marker_5860367491e464d93dd1d0518db2b93e = L.marker(
+                [-3.782635, -38.5538401],
+                {
+}
+            ).addTo(feature_group_4ba38bd3c8975d3e49c758bbf6d2cc8e);
+        
+    
+            var icon_62298825012b9e4d6e8e08ef323f44eb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_377e428f211ca94511ace54256ae6593 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_51d65a36b112a694571e514e54a41bee = $(`<div id="html_51d65a36b112a694571e514e54a41bee" style="width: 100.0%; height: 100.0%;">COMETA (JOAO CARLOS)</div>`)[0];
+                popup_377e428f211ca94511ace54256ae6593.setContent(html_51d65a36b112a694571e514e54a41bee);
+            
+        
+
+        marker_5860367491e464d93dd1d0518db2b93e.bindPopup(popup_377e428f211ca94511ace54256ae6593)
+        ;
+
+        
+    
+    
+                marker_5860367491e464d93dd1d0518db2b93e.setIcon(icon_62298825012b9e4d6e8e08ef323f44eb);
+            
+    
+            var marker_0d10f77cfe375c15056a01d1dfc0530a = L.marker(
+                [-3.8109052, -38.6092229],
+                {
+}
+            ).addTo(feature_group_4ba38bd3c8975d3e49c758bbf6d2cc8e);
+        
+    
+            var icon_6db2f37bec9ba28577898b1e6c943e97 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5adf6ca60c6a7bfe13a7ce4b0757f572 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a6a08a26018d02106208e7d484e1003 = $(`<div id="html_0a6a08a26018d02106208e7d484e1003" style="width: 100.0%; height: 100.0%;">COMETA (OSORIO DE PAIVA)</div>`)[0];
+                popup_5adf6ca60c6a7bfe13a7ce4b0757f572.setContent(html_0a6a08a26018d02106208e7d484e1003);
+            
+        
+
+        marker_0d10f77cfe375c15056a01d1dfc0530a.bindPopup(popup_5adf6ca60c6a7bfe13a7ce4b0757f572)
+        ;
+
+        
+    
+    
+                marker_0d10f77cfe375c15056a01d1dfc0530a.setIcon(icon_6db2f37bec9ba28577898b1e6c943e97);
+            
+    
+            var marker_2d97cde3bc645df3f9dafc5ae3fcc910 = L.marker(
+                [-3.7807157, -38.6223482],
+                {
+}
+            ).addTo(feature_group_4ba38bd3c8975d3e49c758bbf6d2cc8e);
+        
+    
+            var icon_33a82963ed7d3e60267fad3eff3f8b2d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_14515c82aa588df92504d199be67d122 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_23a33e8204ad62794bf25b375e05aaab = $(`<div id="html_23a33e8204ad62794bf25b375e05aaab" style="width: 100.0%; height: 100.0%;">CENTERBOX - ATACAREJO</div>`)[0];
+                popup_14515c82aa588df92504d199be67d122.setContent(html_23a33e8204ad62794bf25b375e05aaab);
+            
+        
+
+        marker_2d97cde3bc645df3f9dafc5ae3fcc910.bindPopup(popup_14515c82aa588df92504d199be67d122)
+        ;
+
+        
+    
+    
+                marker_2d97cde3bc645df3f9dafc5ae3fcc910.setIcon(icon_33a82963ed7d3e60267fad3eff3f8b2d);
+            
+    
+            var marker_3fdc36bf2eeda89e278ef0a6551b3dee = L.marker(
+                [-3.894516, -38.682205],
+                {
+}
+            ).addTo(feature_group_4ba38bd3c8975d3e49c758bbf6d2cc8e);
+        
+    
+            var icon_f22455d2a581ec1f5b1fcfb2a2c73b73 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_644c9f4a911e41a587d6c1f08854a2e8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a822ce273e7e95c8e4efa9967dc1eb1e = $(`<div id="html_a822ce273e7e95c8e4efa9967dc1eb1e" style="width: 100.0%; height: 100.0%;">PINHEIRO - MARANGUAPE</div>`)[0];
+                popup_644c9f4a911e41a587d6c1f08854a2e8.setContent(html_a822ce273e7e95c8e4efa9967dc1eb1e);
+            
+        
+
+        marker_3fdc36bf2eeda89e278ef0a6551b3dee.bindPopup(popup_644c9f4a911e41a587d6c1f08854a2e8)
+        ;
+
+        
+    
+    
+                marker_3fdc36bf2eeda89e278ef0a6551b3dee.setIcon(icon_f22455d2a581ec1f5b1fcfb2a2c73b73);
+            
+    
+            var poly_line_91699c1f44189c90baafb12c751e1baf = L.polyline(
+                [[-3.77778933, -38.59964399], [-3.789045, -38.5864455], [-3.8003218, -38.5880765], [-3.8009513, -38.586656], [-3.8098495, -38.5743582], [-3.797637, -38.57033], [-3.79182527, -38.5671401], [-3.7855748, -38.5667357], [-3.782635, -38.5538401], [-3.8109052, -38.6092229], [-3.7807157, -38.6223482], [-3.894516, -38.682205]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_4ba38bd3c8975d3e49c758bbf6d2cc8e);
+        
+    
+            feature_group_4ba38bd3c8975d3e49c758bbf6d2cc8e.addTo(map_d683966226d3ad3ecb00d5a373f77802);
+        
+    
+            var feature_group_f209bfeb8e492b505f1384ac72c0a325 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_d86116a5d72140b9884538fc5650840a = L.marker(
+                [-3.81050075, -38.57394099],
+                {
+}
+            ).addTo(feature_group_f209bfeb8e492b505f1384ac72c0a325);
+        
+    
+            var icon_b46a021aa099db6e67ec6267f8990ca5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5d3edf8fc3765a0cbda1c7b5591dbf7b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_11fba4250f3ad9e0a7a9eb5440846168 = $(`<div id="html_11fba4250f3ad9e0a7a9eb5440846168" style="width: 100.0%; height: 100.0%;">COMETA (MONDUBIM)</div>`)[0];
+                popup_5d3edf8fc3765a0cbda1c7b5591dbf7b.setContent(html_11fba4250f3ad9e0a7a9eb5440846168);
+            
+        
+
+        marker_d86116a5d72140b9884538fc5650840a.bindPopup(popup_5d3edf8fc3765a0cbda1c7b5591dbf7b)
+        ;
+
+        
+    
+    
+                marker_d86116a5d72140b9884538fc5650840a.setIcon(icon_b46a021aa099db6e67ec6267f8990ca5);
+            
+    
+            var marker_77d82ebbed0f1ceb9ccda8fd4b48bbfd = L.marker(
+                [-3.8165396, -38.5571378],
+                {
+}
+            ).addTo(feature_group_f209bfeb8e492b505f1384ac72c0a325);
+        
+    
+            var icon_ccace9c47bfa9c568c6913bc1ac6a397 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6fa16cd356ef87007edb289b269424d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ef8cecde3f30535c22ac3f57c6c6efb9 = $(`<div id="html_ef8cecde3f30535c22ac3f57c6c6efb9" style="width: 100.0%; height: 100.0%;">LAG - MONDUBIM</div>`)[0];
+                popup_6fa16cd356ef87007edb289b269424d0.setContent(html_ef8cecde3f30535c22ac3f57c6c6efb9);
+            
+        
+
+        marker_77d82ebbed0f1ceb9ccda8fd4b48bbfd.bindPopup(popup_6fa16cd356ef87007edb289b269424d0)
+        ;
+
+        
+    
+    
+                marker_77d82ebbed0f1ceb9ccda8fd4b48bbfd.setIcon(icon_ccace9c47bfa9c568c6913bc1ac6a397);
+            
+    
+            var marker_1abb29adc3ac6e9a8ea3fd73364c09a8 = L.marker(
+                [-3.8207176, -38.55885136],
+                {
+}
+            ).addTo(feature_group_f209bfeb8e492b505f1384ac72c0a325);
+        
+    
+            var icon_61e584c615efebd1fcf5f4871293c64f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4617ea50b792ff74c3511c10d8ab6c2a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8232ecd6dbfd29a8bb6f97bbd69cf5e0 = $(`<div id="html_8232ecd6dbfd29a8bb6f97bbd69cf5e0" style="width: 100.0%; height: 100.0%;">MATEUS - JOSE WALTER</div>`)[0];
+                popup_4617ea50b792ff74c3511c10d8ab6c2a.setContent(html_8232ecd6dbfd29a8bb6f97bbd69cf5e0);
+            
+        
+
+        marker_1abb29adc3ac6e9a8ea3fd73364c09a8.bindPopup(popup_4617ea50b792ff74c3511c10d8ab6c2a)
+        ;
+
+        
+    
+    
+                marker_1abb29adc3ac6e9a8ea3fd73364c09a8.setIcon(icon_61e584c615efebd1fcf5f4871293c64f);
+            
+    
+            var marker_2b9da6cdfe6e5ee7fd87d23f6ba33024 = L.marker(
+                [-3.8211125, -38.5562854],
+                {
+}
+            ).addTo(feature_group_f209bfeb8e492b505f1384ac72c0a325);
+        
+    
+            var icon_c58f6e766c0eb29c06d9f32d96da01dc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fa0ec8c6344d6f0750342f66323e7c50 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9f51470e82d52ac30502d83685ca1833 = $(`<div id="html_9f51470e82d52ac30502d83685ca1833" style="width: 100.0%; height: 100.0%;">SUPER DO POVO - PARQUE DOIS IRMAOS</div>`)[0];
+                popup_fa0ec8c6344d6f0750342f66323e7c50.setContent(html_9f51470e82d52ac30502d83685ca1833);
+            
+        
+
+        marker_2b9da6cdfe6e5ee7fd87d23f6ba33024.bindPopup(popup_fa0ec8c6344d6f0750342f66323e7c50)
+        ;
+
+        
+    
+    
+                marker_2b9da6cdfe6e5ee7fd87d23f6ba33024.setIcon(icon_c58f6e766c0eb29c06d9f32d96da01dc);
+            
+    
+            var marker_7b4a309ebe582560f05b89900425bd7a = L.marker(
+                [-3.83055313, -38.56049735],
+                {
+}
+            ).addTo(feature_group_f209bfeb8e492b505f1384ac72c0a325);
+        
+    
+            var icon_949344f1a39c8468df8149eea0dce876 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_41f704806e95858b0a5eb3585dc5ad9c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e40e7012db48bb9df1de99bddc61fe05 = $(`<div id="html_e40e7012db48bb9df1de99bddc61fe05" style="width: 100.0%; height: 100.0%;">COMETA (JOSE WALTER 01)</div>`)[0];
+                popup_41f704806e95858b0a5eb3585dc5ad9c.setContent(html_e40e7012db48bb9df1de99bddc61fe05);
+            
+        
+
+        marker_7b4a309ebe582560f05b89900425bd7a.bindPopup(popup_41f704806e95858b0a5eb3585dc5ad9c)
+        ;
+
+        
+    
+    
+                marker_7b4a309ebe582560f05b89900425bd7a.setIcon(icon_949344f1a39c8468df8149eea0dce876);
+            
+    
+            var marker_f3d1a3e39e7620fa6452cf98f0babfd4 = L.marker(
+                [-3.8071766, -38.555096],
+                {
+}
+            ).addTo(feature_group_f209bfeb8e492b505f1384ac72c0a325);
+        
+    
+            var icon_d62d1e850704b5c7aba543ac5fea1e9e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3cd401d83f0221daa4387b4fcbfb6933 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff5b2d01cc4ce97376c97989488fa993 = $(`<div id="html_ff5b2d01cc4ce97376c97989488fa993" style="width: 100.0%; height: 100.0%;">CENTERBOX - BERNARDO MANUEL</div>`)[0];
+                popup_3cd401d83f0221daa4387b4fcbfb6933.setContent(html_ff5b2d01cc4ce97376c97989488fa993);
+            
+        
+
+        marker_f3d1a3e39e7620fa6452cf98f0babfd4.bindPopup(popup_3cd401d83f0221daa4387b4fcbfb6933)
+        ;
+
+        
+    
+    
+                marker_f3d1a3e39e7620fa6452cf98f0babfd4.setIcon(icon_d62d1e850704b5c7aba543ac5fea1e9e);
+            
+    
+            var marker_23dd981d08f36075e495bc1f1ac739fe = L.marker(
+                [-3.791909099999998, -38.5497507],
+                {
+}
+            ).addTo(feature_group_f209bfeb8e492b505f1384ac72c0a325);
+        
+    
+            var icon_afe5afcc9dd443512f28d373991bb8fc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e302261c4bc5e7bf763f94cabac2a326 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bfea6abf276022df34b1b7577c173de2 = $(`<div id="html_bfea6abf276022df34b1b7577c173de2" style="width: 100.0%; height: 100.0%;">FRANGOLANDIA - ITAPERI</div>`)[0];
+                popup_e302261c4bc5e7bf763f94cabac2a326.setContent(html_bfea6abf276022df34b1b7577c173de2);
+            
+        
+
+        marker_23dd981d08f36075e495bc1f1ac739fe.bindPopup(popup_e302261c4bc5e7bf763f94cabac2a326)
+        ;
+
+        
+    
+    
+                marker_23dd981d08f36075e495bc1f1ac739fe.setIcon(icon_afe5afcc9dd443512f28d373991bb8fc);
+            
+    
+            var marker_8027a68c40be3f1ac5111c2e965e9f8f = L.marker(
+                [-3.787502, -38.547114],
+                {
+}
+            ).addTo(feature_group_f209bfeb8e492b505f1384ac72c0a325);
+        
+    
+            var icon_bd598f13a003a65ba70f114b2363ee93 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f94524b395d2e3ac1f17b441d2d316e5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f20ae768940318daec37e54856da1b40 = $(`<div id="html_f20ae768940318daec37e54856da1b40" style="width: 100.0%; height: 100.0%;">COMETA (SERRINHA)</div>`)[0];
+                popup_f94524b395d2e3ac1f17b441d2d316e5.setContent(html_f20ae768940318daec37e54856da1b40);
+            
+        
+
+        marker_8027a68c40be3f1ac5111c2e965e9f8f.bindPopup(popup_f94524b395d2e3ac1f17b441d2d316e5)
+        ;
+
+        
+    
+    
+                marker_8027a68c40be3f1ac5111c2e965e9f8f.setIcon(icon_bd598f13a003a65ba70f114b2363ee93);
+            
+    
+            var marker_e40d17f63c2692a2440f46661667673f = L.marker(
+                [-3.8782661, -38.59633799],
+                {
+}
+            ).addTo(feature_group_f209bfeb8e492b505f1384ac72c0a325);
+        
+    
+            var icon_e4e9aa6f1b73e8a772888279bfea6350 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b2bdc01780412abc0d043df9939ed471 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0da2a02a02f87982644922a18dd21112 = $(`<div id="html_0da2a02a02f87982644922a18dd21112" style="width: 100.0%; height: 100.0%;">MATEUS - MARACANAU</div>`)[0];
+                popup_b2bdc01780412abc0d043df9939ed471.setContent(html_0da2a02a02f87982644922a18dd21112);
+            
+        
+
+        marker_e40d17f63c2692a2440f46661667673f.bindPopup(popup_b2bdc01780412abc0d043df9939ed471)
+        ;
+
+        
+    
+    
+                marker_e40d17f63c2692a2440f46661667673f.setIcon(icon_e4e9aa6f1b73e8a772888279bfea6350);
+            
+    
+            var marker_0db30aef60a6b8ee88e47199247418b6 = L.marker(
+                [-3.8802888, -38.6246732],
+                {
+}
+            ).addTo(feature_group_f209bfeb8e492b505f1384ac72c0a325);
+        
+    
+            var icon_60078ece28b8c2c860922e139caed521 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_40881160878002ccc5e6b33b52ad704e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4158897803a7ad0ba0001428fe9f2c99 = $(`<div id="html_4158897803a7ad0ba0001428fe9f2c99" style="width: 100.0%; height: 100.0%;">FRANGOLANDIA - MARACANAU</div>`)[0];
+                popup_40881160878002ccc5e6b33b52ad704e.setContent(html_4158897803a7ad0ba0001428fe9f2c99);
+            
+        
+
+        marker_0db30aef60a6b8ee88e47199247418b6.bindPopup(popup_40881160878002ccc5e6b33b52ad704e)
+        ;
+
+        
+    
+    
+                marker_0db30aef60a6b8ee88e47199247418b6.setIcon(icon_60078ece28b8c2c860922e139caed521);
+            
+    
+            var marker_8c6877914e0779d6b1175b0ea111102c = L.marker(
+                [-3.8819005, -38.62523],
+                {
+}
+            ).addTo(feature_group_f209bfeb8e492b505f1384ac72c0a325);
+        
+    
+            var icon_30f15510c914ec64d78cfa861fb7e15b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ef093e9e8b56c2cf84c79ce0503f9f18 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_04d3f3deb5173a420e9448976738ada5 = $(`<div id="html_04d3f3deb5173a420e9448976738ada5" style="width: 100.0%; height: 100.0%;">COMETA (MARACANAU)</div>`)[0];
+                popup_ef093e9e8b56c2cf84c79ce0503f9f18.setContent(html_04d3f3deb5173a420e9448976738ada5);
+            
+        
+
+        marker_8c6877914e0779d6b1175b0ea111102c.bindPopup(popup_ef093e9e8b56c2cf84c79ce0503f9f18)
+        ;
+
+        
+    
+    
+                marker_8c6877914e0779d6b1175b0ea111102c.setIcon(icon_30f15510c914ec64d78cfa861fb7e15b);
+            
+    
+            var marker_15bfac1de896bd9b8035e1447507dc7e = L.marker(
+                [-3.89666198, -38.67373332],
+                {
+}
+            ).addTo(feature_group_f209bfeb8e492b505f1384ac72c0a325);
+        
+    
+            var icon_5b01ddc31794d022666f772f62bc415f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5bb7920933db4d4b25db8e61e81813be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dbc9c21a47dfb4a8a61a6b1d3862712e = $(`<div id="html_dbc9c21a47dfb4a8a61a6b1d3862712e" style="width: 100.0%; height: 100.0%;">MATEUS - MARANGUAPE</div>`)[0];
+                popup_5bb7920933db4d4b25db8e61e81813be.setContent(html_dbc9c21a47dfb4a8a61a6b1d3862712e);
+            
+        
+
+        marker_15bfac1de896bd9b8035e1447507dc7e.bindPopup(popup_5bb7920933db4d4b25db8e61e81813be)
+        ;
+
+        
+    
+    
+                marker_15bfac1de896bd9b8035e1447507dc7e.setIcon(icon_5b01ddc31794d022666f772f62bc415f);
+            
+    
+            var poly_line_8f24acae27ffd4af913d53946618699f = L.polyline(
+                [[-3.81050075, -38.57394099], [-3.8165396, -38.5571378], [-3.8207176, -38.55885136], [-3.8211125, -38.5562854], [-3.83055313, -38.56049735], [-3.8071766, -38.555096], [-3.791909099999998, -38.5497507], [-3.787502, -38.547114], [-3.8782661, -38.59633799], [-3.8802888, -38.6246732], [-3.8819005, -38.62523], [-3.89666198, -38.67373332]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f209bfeb8e492b505f1384ac72c0a325);
+        
+    
+            feature_group_f209bfeb8e492b505f1384ac72c0a325.addTo(map_d683966226d3ad3ecb00d5a373f77802);
+        
+    
+            var feature_group_e6db564b4e69dc73f1e5a238d5cca456 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_9af4ccdb7afcb6ab8e2700d85365e47f = L.marker(
+                [-3.831409200000024, -38.560540300000014],
+                {
+}
+            ).addTo(feature_group_e6db564b4e69dc73f1e5a238d5cca456);
+        
+    
+            var icon_75e90bfc1f717baf1784a36939d39146 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a6d66c153d449c318628a30cc26c7ad5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c7025e528c775815ebbd1d713aea079c = $(`<div id="html_c7025e528c775815ebbd1d713aea079c" style="width: 100.0%; height: 100.0%;">SUPER DO POVO - PREF JOSE WALTER</div>`)[0];
+                popup_a6d66c153d449c318628a30cc26c7ad5.setContent(html_c7025e528c775815ebbd1d713aea079c);
+            
+        
+
+        marker_9af4ccdb7afcb6ab8e2700d85365e47f.bindPopup(popup_a6d66c153d449c318628a30cc26c7ad5)
+        ;
+
+        
+    
+    
+                marker_9af4ccdb7afcb6ab8e2700d85365e47f.setIcon(icon_75e90bfc1f717baf1784a36939d39146);
+            
+    
+            var marker_347105fd7285d33ca564451c2e21cea2 = L.marker(
+                [-3.8008318, -38.5299942],
+                {
+}
+            ).addTo(feature_group_e6db564b4e69dc73f1e5a238d5cca456);
+        
+    
+            var icon_5a5db79be8ed7e795ab4653400d961b8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dc23db2b40fde2141b303108462c61e8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_843dbdeb53e6e95e0fc244425f2d0672 = $(`<div id="html_843dbdeb53e6e95e0fc244425f2d0672" style="width: 100.0%; height: 100.0%;">SUPER LAGOA - PASSARE</div>`)[0];
+                popup_dc23db2b40fde2141b303108462c61e8.setContent(html_843dbdeb53e6e95e0fc244425f2d0672);
+            
+        
+
+        marker_347105fd7285d33ca564451c2e21cea2.bindPopup(popup_dc23db2b40fde2141b303108462c61e8)
+        ;
+
+        
+    
+    
+                marker_347105fd7285d33ca564451c2e21cea2.setIcon(icon_5a5db79be8ed7e795ab4653400d961b8);
+            
+    
+            var marker_9c04a2a258bda1dbc776426dad604712 = L.marker(
+                [-3.7930876, -38.5335303],
+                {
+}
+            ).addTo(feature_group_e6db564b4e69dc73f1e5a238d5cca456);
+        
+    
+            var icon_54eaf6f331349601215aa7ca9cfa3242 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d2aef731f956bd315cfb2cedd00c9bf2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b4958e582ae49ac260981c23204221d6 = $(`<div id="html_b4958e582ae49ac260981c23204221d6" style="width: 100.0%; height: 100.0%;">SUPER DO POVO - PASSARE</div>`)[0];
+                popup_d2aef731f956bd315cfb2cedd00c9bf2.setContent(html_b4958e582ae49ac260981c23204221d6);
+            
+        
+
+        marker_9c04a2a258bda1dbc776426dad604712.bindPopup(popup_d2aef731f956bd315cfb2cedd00c9bf2)
+        ;
+
+        
+    
+    
+                marker_9c04a2a258bda1dbc776426dad604712.setIcon(icon_54eaf6f331349601215aa7ca9cfa3242);
+            
+    
+            var marker_9f1302f75d5fc4c48d5ee58aac418b90 = L.marker(
+                [-3.79093331, -38.53740405],
+                {
+}
+            ).addTo(feature_group_e6db564b4e69dc73f1e5a238d5cca456);
+        
+    
+            var icon_78c1128667c8091c9eb7f82ad13669cd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5b6a5d4a93125502bab4d6443f4fe753 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_754887764bf945e18e68383ecc1e288e = $(`<div id="html_754887764bf945e18e68383ecc1e288e" style="width: 100.0%; height: 100.0%;">COMETA (PASSARE)</div>`)[0];
+                popup_5b6a5d4a93125502bab4d6443f4fe753.setContent(html_754887764bf945e18e68383ecc1e288e);
+            
+        
+
+        marker_9f1302f75d5fc4c48d5ee58aac418b90.bindPopup(popup_5b6a5d4a93125502bab4d6443f4fe753)
+        ;
+
+        
+    
+    
+                marker_9f1302f75d5fc4c48d5ee58aac418b90.setIcon(icon_78c1128667c8091c9eb7f82ad13669cd);
+            
+    
+            var marker_718414a12ad3c94a6e1be624d0ddd407 = L.marker(
+                [-3.830081, -38.509759],
+                {
+}
+            ).addTo(feature_group_e6db564b4e69dc73f1e5a238d5cca456);
+        
+    
+            var icon_a60a08127ecd2dcea3c422bc877e1386 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_30036a3ff4d34434e71bc7aef0cafd5c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_75ee7cfd3964d4c206b339ad9712424e = $(`<div id="html_75ee7cfd3964d4c206b339ad9712424e" style="width: 100.0%; height: 100.0%;">CENTERBOX - MESSEJANA - LJ 02</div>`)[0];
+                popup_30036a3ff4d34434e71bc7aef0cafd5c.setContent(html_75ee7cfd3964d4c206b339ad9712424e);
+            
+        
+
+        marker_718414a12ad3c94a6e1be624d0ddd407.bindPopup(popup_30036a3ff4d34434e71bc7aef0cafd5c)
+        ;
+
+        
+    
+    
+                marker_718414a12ad3c94a6e1be624d0ddd407.setIcon(icon_a60a08127ecd2dcea3c422bc877e1386);
+            
+    
+            var marker_9ebc8aee592a8046a3fa83909bc1dd34 = L.marker(
+                [-3.8322624, -38.4923427],
+                {
+}
+            ).addTo(feature_group_e6db564b4e69dc73f1e5a238d5cca456);
+        
+    
+            var icon_eebf552518eaebfb2ccd7f7d97e26910 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_202cfc72c623b1cb7ee306c5434bf0fc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b6631d992a6eb098877f3eeed7a7fcfc = $(`<div id="html_b6631d992a6eb098877f3eeed7a7fcfc" style="width: 100.0%; height: 100.0%;">FRANGOLANDIA - MESSEJANA</div>`)[0];
+                popup_202cfc72c623b1cb7ee306c5434bf0fc.setContent(html_b6631d992a6eb098877f3eeed7a7fcfc);
+            
+        
+
+        marker_9ebc8aee592a8046a3fa83909bc1dd34.bindPopup(popup_202cfc72c623b1cb7ee306c5434bf0fc)
+        ;
+
+        
+    
+    
+                marker_9ebc8aee592a8046a3fa83909bc1dd34.setIcon(icon_eebf552518eaebfb2ccd7f7d97e26910);
+            
+    
+            var marker_8f45f2bd790d8cdbc181bd5769c79f73 = L.marker(
+                [-3.8489518, -38.51200331],
+                {
+}
+            ).addTo(feature_group_e6db564b4e69dc73f1e5a238d5cca456);
+        
+    
+            var icon_ee27f45a322973be7757c2a600f93828 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_29807efc6e8017073118b9f0882d8084 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_51e35b78312034b6253c4fd84f1573e3 = $(`<div id="html_51e35b78312034b6253c4fd84f1573e3" style="width: 100.0%; height: 100.0%;">CENTERBOX - VALPARAISO</div>`)[0];
+                popup_29807efc6e8017073118b9f0882d8084.setContent(html_51e35b78312034b6253c4fd84f1573e3);
+            
+        
+
+        marker_8f45f2bd790d8cdbc181bd5769c79f73.bindPopup(popup_29807efc6e8017073118b9f0882d8084)
+        ;
+
+        
+    
+    
+                marker_8f45f2bd790d8cdbc181bd5769c79f73.setIcon(icon_ee27f45a322973be7757c2a600f93828);
+            
+    
+            var marker_4e4fdbeb8d52bd27cf731d45cf179248 = L.marker(
+                [-3.8573702, -38.5025713],
+                {
+}
+            ).addTo(feature_group_e6db564b4e69dc73f1e5a238d5cca456);
+        
+    
+            var icon_8a7fd3e28d5a1b9ad31eddecc313ed0a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_75f87eb568b61e075c300b3f075c1112 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8629ee12cc3b4b49d86b3e6daaec5813 = $(`<div id="html_8629ee12cc3b4b49d86b3e6daaec5813" style="width: 100.0%; height: 100.0%;">CENTERBOX - PARQUE SANTA MARIA</div>`)[0];
+                popup_75f87eb568b61e075c300b3f075c1112.setContent(html_8629ee12cc3b4b49d86b3e6daaec5813);
+            
+        
+
+        marker_4e4fdbeb8d52bd27cf731d45cf179248.bindPopup(popup_75f87eb568b61e075c300b3f075c1112)
+        ;
+
+        
+    
+    
+                marker_4e4fdbeb8d52bd27cf731d45cf179248.setIcon(icon_8a7fd3e28d5a1b9ad31eddecc313ed0a);
+            
+    
+            var marker_cadeae2c4fa6c6cf3f477ddd5590a254 = L.marker(
+                [-3.8704983, -38.4675121],
+                {
+}
+            ).addTo(feature_group_e6db564b4e69dc73f1e5a238d5cca456);
+        
+    
+            var icon_d38a390d0d8bbb4182c168697d4a61e5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b6cd62e5827b99a9c7037c12964bcd0a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2474bb93e61a11ce90975e66a1aa2717 = $(`<div id="html_2474bb93e61a11ce90975e66a1aa2717" style="width: 100.0%; height: 100.0%;">FRANGOLANDIA - EUSEBIO</div>`)[0];
+                popup_b6cd62e5827b99a9c7037c12964bcd0a.setContent(html_2474bb93e61a11ce90975e66a1aa2717);
+            
+        
+
+        marker_cadeae2c4fa6c6cf3f477ddd5590a254.bindPopup(popup_b6cd62e5827b99a9c7037c12964bcd0a)
+        ;
+
+        
+    
+    
+                marker_cadeae2c4fa6c6cf3f477ddd5590a254.setIcon(icon_d38a390d0d8bbb4182c168697d4a61e5);
+            
+    
+            var marker_b1098854f4aba93778b22fb2d51a98b4 = L.marker(
+                [-3.8795207, -38.4613795],
+                {
+}
+            ).addTo(feature_group_e6db564b4e69dc73f1e5a238d5cca456);
+        
+    
+            var icon_203d317900d0f92412406bd983e52573 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3f8b867d853093ef34234e30474298d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f4808fa2abcc35600feaa14f68b2ea3c = $(`<div id="html_f4808fa2abcc35600feaa14f68b2ea3c" style="width: 100.0%; height: 100.0%;">COMETA (EUSEBIO)</div>`)[0];
+                popup_3f8b867d853093ef34234e30474298d1.setContent(html_f4808fa2abcc35600feaa14f68b2ea3c);
+            
+        
+
+        marker_b1098854f4aba93778b22fb2d51a98b4.bindPopup(popup_3f8b867d853093ef34234e30474298d1)
+        ;
+
+        
+    
+    
+                marker_b1098854f4aba93778b22fb2d51a98b4.setIcon(icon_203d317900d0f92412406bd983e52573);
+            
+    
+            var marker_51d90a526170814d83d3180efd67c52d = L.marker(
+                [-3.90694584, -38.50743777],
+                {
+}
+            ).addTo(feature_group_e6db564b4e69dc73f1e5a238d5cca456);
+        
+    
+            var icon_f0e147a2d4afbda20d77fc0ec8536142 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_329ae3d59dba3eabbc3963086339c186 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_de4801cb117e5f5fd8744549cdbb44e2 = $(`<div id="html_de4801cb117e5f5fd8744549cdbb44e2" style="width: 100.0%; height: 100.0%;">CENTERBOX - PARQUE DOM PEDRO</div>`)[0];
+                popup_329ae3d59dba3eabbc3963086339c186.setContent(html_de4801cb117e5f5fd8744549cdbb44e2);
+            
+        
+
+        marker_51d90a526170814d83d3180efd67c52d.bindPopup(popup_329ae3d59dba3eabbc3963086339c186)
+        ;
+
+        
+    
+    
+                marker_51d90a526170814d83d3180efd67c52d.setIcon(icon_f0e147a2d4afbda20d77fc0ec8536142);
+            
+    
+            var marker_a1099785dc08f9c2d363f8c0708b6b4f = L.marker(
+                [-3.89368547, -38.51477265],
+                {
+}
+            ).addTo(feature_group_e6db564b4e69dc73f1e5a238d5cca456);
+        
+    
+            var icon_c9801ae15ec876f094f63aa19ac221da = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ffcc6400b5ee22728f46905c70516733 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_484c9ee4f94b741cded72b2be1df613c = $(`<div id="html_484c9ee4f94b741cded72b2be1df613c" style="width: 100.0%; height: 100.0%;">CENTERBOX - PEDRAS</div>`)[0];
+                popup_ffcc6400b5ee22728f46905c70516733.setContent(html_484c9ee4f94b741cded72b2be1df613c);
+            
+        
+
+        marker_a1099785dc08f9c2d363f8c0708b6b4f.bindPopup(popup_ffcc6400b5ee22728f46905c70516733)
+        ;
+
+        
+    
+    
+                marker_a1099785dc08f9c2d363f8c0708b6b4f.setIcon(icon_c9801ae15ec876f094f63aa19ac221da);
+            
+    
+            var poly_line_e24dc31a22ad774a859ee96b48778204 = L.polyline(
+                [[-3.831409200000024, -38.560540300000014], [-3.8008318, -38.5299942], [-3.7930876, -38.5335303], [-3.79093331, -38.53740405], [-3.830081, -38.509759], [-3.8322624, -38.4923427], [-3.8489518, -38.51200331], [-3.8573702, -38.5025713], [-3.8704983, -38.4675121], [-3.8795207, -38.4613795], [-3.90694584, -38.50743777], [-3.89368547, -38.51477265]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e6db564b4e69dc73f1e5a238d5cca456);
+        
+    
+            feature_group_e6db564b4e69dc73f1e5a238d5cca456.addTo(map_d683966226d3ad3ecb00d5a373f77802);
+        
+    
+            var feature_group_b3fdab8b99d24324f670d8ad4003d786 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_2eb139e4e7622d935b920b9b32f2dfac = L.marker(
+                [-3.832713, -38.4916446],
+                {
+}
+            ).addTo(feature_group_b3fdab8b99d24324f670d8ad4003d786);
+        
+    
+            var icon_697ebc911136e5036539d1f055f98c26 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9522ef7c66bee994d21eade08f4eb5d6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2df5c9bdcaaebd859dcb5f9604ba8a94 = $(`<div id="html_2df5c9bdcaaebd859dcb5f9604ba8a94" style="width: 100.0%; height: 100.0%;">LAG - MESSEJANA</div>`)[0];
+                popup_9522ef7c66bee994d21eade08f4eb5d6.setContent(html_2df5c9bdcaaebd859dcb5f9604ba8a94);
+            
+        
+
+        marker_2eb139e4e7622d935b920b9b32f2dfac.bindPopup(popup_9522ef7c66bee994d21eade08f4eb5d6)
+        ;
+
+        
+    
+    
+                marker_2eb139e4e7622d935b920b9b32f2dfac.setIcon(icon_697ebc911136e5036539d1f055f98c26);
+            
+    
+            var marker_901c0143772996e3cf2018103e331187 = L.marker(
+                [-3.8301305, -38.4875383],
+                {
+}
+            ).addTo(feature_group_b3fdab8b99d24324f670d8ad4003d786);
+        
+    
+            var icon_a91c87874c26c5c3eeb2f62da76aaea9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7bcf2fa40c9ee7e8076401bed0c0bdcf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_84afb276e6d3cf2cb18047b43e7a384a = $(`<div id="html_84afb276e6d3cf2cb18047b43e7a384a" style="width: 100.0%; height: 100.0%;">COMETA (JOAQUIM FELICIO)</div>`)[0];
+                popup_7bcf2fa40c9ee7e8076401bed0c0bdcf.setContent(html_84afb276e6d3cf2cb18047b43e7a384a);
+            
+        
+
+        marker_901c0143772996e3cf2018103e331187.bindPopup(popup_7bcf2fa40c9ee7e8076401bed0c0bdcf)
+        ;
+
+        
+    
+    
+                marker_901c0143772996e3cf2018103e331187.setIcon(icon_a91c87874c26c5c3eeb2f62da76aaea9);
+            
+    
+            var marker_38168227c22f301f86b021907598d10d = L.marker(
+                [-3.8370287, -38.4822819],
+                {
+}
+            ).addTo(feature_group_b3fdab8b99d24324f670d8ad4003d786);
+        
+    
+            var icon_06955ab9a62e5ff6fb513b5303af79a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_63aefdcf6c6dd7e7b334c813a18812b3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8af9b8637ae14a7637d339f7802a03b1 = $(`<div id="html_8af9b8637ae14a7637d339f7802a03b1" style="width: 100.0%; height: 100.0%;">PINHEIRO - WASHINGTON SOARES</div>`)[0];
+                popup_63aefdcf6c6dd7e7b334c813a18812b3.setContent(html_8af9b8637ae14a7637d339f7802a03b1);
+            
+        
+
+        marker_38168227c22f301f86b021907598d10d.bindPopup(popup_63aefdcf6c6dd7e7b334c813a18812b3)
+        ;
+
+        
+    
+    
+                marker_38168227c22f301f86b021907598d10d.setIcon(icon_06955ab9a62e5ff6fb513b5303af79a2);
+            
+    
+            var marker_00112283e339a7a639196bb00110e054 = L.marker(
+                [-3.82637289, -38.47433135],
+                {
+}
+            ).addTo(feature_group_b3fdab8b99d24324f670d8ad4003d786);
+        
+    
+            var icon_a44c73be87249f7a96603839b4465b42 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aee47163c092c842aeef21c2909d2051 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_788fdb1ec0561430197a354858636c76 = $(`<div id="html_788fdb1ec0561430197a354858636c76" style="width: 100.0%; height: 100.0%;">CENTERBOX - CURIO</div>`)[0];
+                popup_aee47163c092c842aeef21c2909d2051.setContent(html_788fdb1ec0561430197a354858636c76);
+            
+        
+
+        marker_00112283e339a7a639196bb00110e054.bindPopup(popup_aee47163c092c842aeef21c2909d2051)
+        ;
+
+        
+    
+    
+                marker_00112283e339a7a639196bb00110e054.setIcon(icon_a44c73be87249f7a96603839b4465b42);
+            
+    
+            var marker_c1fb80ba8f2c214509e86ec242e1a39c = L.marker(
+                [-3.82635425, -38.47426069],
+                {
+}
+            ).addTo(feature_group_b3fdab8b99d24324f670d8ad4003d786);
+        
+    
+            var icon_8910d60965a1359d0aa953b5ef1a9774 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_df28a2a060e2d8c84cc1fb8f762cc1fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f78c3e1dbe55ddd8df254ad874a44aff = $(`<div id="html_f78c3e1dbe55ddd8df254ad874a44aff" style="width: 100.0%; height: 100.0%;">CENTERBOX - LAGOA REDONDA</div>`)[0];
+                popup_df28a2a060e2d8c84cc1fb8f762cc1fd.setContent(html_f78c3e1dbe55ddd8df254ad874a44aff);
+            
+        
+
+        marker_c1fb80ba8f2c214509e86ec242e1a39c.bindPopup(popup_df28a2a060e2d8c84cc1fb8f762cc1fd)
+        ;
+
+        
+    
+    
+                marker_c1fb80ba8f2c214509e86ec242e1a39c.setIcon(icon_8910d60965a1359d0aa953b5ef1a9774);
+            
+    
+            var marker_212bcba39d30fb4a692d536cd75dc974 = L.marker(
+                [-3.8194224, -38.4817816],
+                {
+}
+            ).addTo(feature_group_b3fdab8b99d24324f670d8ad4003d786);
+        
+    
+            var icon_9c162a815c2512b16c2f03c336c3545f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_64411d36c01323d2891fb5e1c37cad24 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_221f9181712a743901f776df1dd319ae = $(`<div id="html_221f9181712a743901f776df1dd319ae" style="width: 100.0%; height: 100.0%;">COMETA (MESSEJANA)</div>`)[0];
+                popup_64411d36c01323d2891fb5e1c37cad24.setContent(html_221f9181712a743901f776df1dd319ae);
+            
+        
+
+        marker_212bcba39d30fb4a692d536cd75dc974.bindPopup(popup_64411d36c01323d2891fb5e1c37cad24)
+        ;
+
+        
+    
+    
+                marker_212bcba39d30fb4a692d536cd75dc974.setIcon(icon_9c162a815c2512b16c2f03c336c3545f);
+            
+    
+            var marker_d3f53e3bb60ac9747a3fb8763e868c8b = L.marker(
+                [-3.821324, -38.4962057],
+                {
+}
+            ).addTo(feature_group_b3fdab8b99d24324f670d8ad4003d786);
+        
+    
+            var icon_7c40bf964b81659b0b5fd41689d46d53 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_44f8c4940f9ad2e7124ed458ffecac8f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c385a2b038645b2f1d8a470802a51306 = $(`<div id="html_c385a2b038645b2f1d8a470802a51306" style="width: 100.0%; height: 100.0%;">PINHEIRO - MESSEJANA</div>`)[0];
+                popup_44f8c4940f9ad2e7124ed458ffecac8f.setContent(html_c385a2b038645b2f1d8a470802a51306);
+            
+        
+
+        marker_d3f53e3bb60ac9747a3fb8763e868c8b.bindPopup(popup_44f8c4940f9ad2e7124ed458ffecac8f)
+        ;
+
+        
+    
+    
+                marker_d3f53e3bb60ac9747a3fb8763e868c8b.setIcon(icon_7c40bf964b81659b0b5fd41689d46d53);
+            
+    
+            var marker_a589fe0b4e903185de0edbf5e1679721 = L.marker(
+                [-3.8194034, -38.4963739],
+                {
+}
+            ).addTo(feature_group_b3fdab8b99d24324f670d8ad4003d786);
+        
+    
+            var icon_e2553964fbd88e33d11ccdee20d22534 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_72de2ef416e7e23b4ae0f43ce0de2f60 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d4dcb04745333b60c7a6132b5533293d = $(`<div id="html_d4dcb04745333b60c7a6132b5533293d" style="width: 100.0%; height: 100.0%;">COMETA (FREI CIRILO)</div>`)[0];
+                popup_72de2ef416e7e23b4ae0f43ce0de2f60.setContent(html_d4dcb04745333b60c7a6132b5533293d);
+            
+        
+
+        marker_a589fe0b4e903185de0edbf5e1679721.bindPopup(popup_72de2ef416e7e23b4ae0f43ce0de2f60)
+        ;
+
+        
+    
+    
+                marker_a589fe0b4e903185de0edbf5e1679721.setIcon(icon_e2553964fbd88e33d11ccdee20d22534);
+            
+    
+            var marker_376216ccabb6d34148c2e8b5b702ad32 = L.marker(
+                [-3.8185168, -38.4971878],
+                {
+}
+            ).addTo(feature_group_b3fdab8b99d24324f670d8ad4003d786);
+        
+    
+            var icon_71b00206bab8adba49338f61dee4d146 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_09061ca49621adfa4400c8501e32b025 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0067698ca47c8ed8d9791f09af5a1ac7 = $(`<div id="html_0067698ca47c8ed8d9791f09af5a1ac7" style="width: 100.0%; height: 100.0%;">CENTERBOX - MESSEJANA - LJ 01</div>`)[0];
+                popup_09061ca49621adfa4400c8501e32b025.setContent(html_0067698ca47c8ed8d9791f09af5a1ac7);
+            
+        
+
+        marker_376216ccabb6d34148c2e8b5b702ad32.bindPopup(popup_09061ca49621adfa4400c8501e32b025)
+        ;
+
+        
+    
+    
+                marker_376216ccabb6d34148c2e8b5b702ad32.setIcon(icon_71b00206bab8adba49338f61dee4d146);
+            
+    
+            var marker_c943c678f30d4fd142a3d6878589089f = L.marker(
+                [-3.8139469, -38.4994049],
+                {
+}
+            ).addTo(feature_group_b3fdab8b99d24324f670d8ad4003d786);
+        
+    
+            var icon_5381e226031a0704c415137acae9ce74 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_df8a2d3ec243b8b4b412aea5e85ab9a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_751c97a78afa7122a0be25cb99048764 = $(`<div id="html_751c97a78afa7122a0be25cb99048764" style="width: 100.0%; height: 100.0%;">MEGA - MESSEJANA</div>`)[0];
+                popup_df8a2d3ec243b8b4b412aea5e85ab9a5.setContent(html_751c97a78afa7122a0be25cb99048764);
+            
+        
+
+        marker_c943c678f30d4fd142a3d6878589089f.bindPopup(popup_df8a2d3ec243b8b4b412aea5e85ab9a5)
+        ;
+
+        
+    
+    
+                marker_c943c678f30d4fd142a3d6878589089f.setIcon(icon_5381e226031a0704c415137acae9ce74);
+            
+    
+            var marker_d65a5fba7929610b7ef1909b32845e7c = L.marker(
+                [-3.811962, -38.496844],
+                {
+}
+            ).addTo(feature_group_b3fdab8b99d24324f670d8ad4003d786);
+        
+    
+            var icon_8767749fd07877e635b1626293b5ec7e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f530292ba3f45b9f35e8cfbe72cdabfb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a49d99eefbb8cd99ec5c7b9aad6c2f26 = $(`<div id="html_a49d99eefbb8cd99ec5c7b9aad6c2f26" style="width: 100.0%; height: 100.0%;">PINHEIRO - CAMBEBA</div>`)[0];
+                popup_f530292ba3f45b9f35e8cfbe72cdabfb.setContent(html_a49d99eefbb8cd99ec5c7b9aad6c2f26);
+            
+        
+
+        marker_d65a5fba7929610b7ef1909b32845e7c.bindPopup(popup_f530292ba3f45b9f35e8cfbe72cdabfb)
+        ;
+
+        
+    
+    
+                marker_d65a5fba7929610b7ef1909b32845e7c.setIcon(icon_8767749fd07877e635b1626293b5ec7e);
+            
+    
+            var marker_38bff883b3c40ec6d0f6e9861f406061 = L.marker(
+                [-3.8101342, -38.4938184],
+                {
+}
+            ).addTo(feature_group_b3fdab8b99d24324f670d8ad4003d786);
+        
+    
+            var icon_20b303f3659fcde7e66e5238061e9f67 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_69de728d9bfcb7436827f2d2362ac438 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9b8c8fb5547b9e80ecba283a3a2c4fea = $(`<div id="html_9b8c8fb5547b9e80ecba283a3a2c4fea" style="width: 100.0%; height: 100.0%;">SUPER DO POVO - CAMBEBA</div>`)[0];
+                popup_69de728d9bfcb7436827f2d2362ac438.setContent(html_9b8c8fb5547b9e80ecba283a3a2c4fea);
+            
+        
+
+        marker_38bff883b3c40ec6d0f6e9861f406061.bindPopup(popup_69de728d9bfcb7436827f2d2362ac438)
+        ;
+
+        
+    
+    
+                marker_38bff883b3c40ec6d0f6e9861f406061.setIcon(icon_20b303f3659fcde7e66e5238061e9f67);
+            
+    
+            var poly_line_b173f050ff864f68c84d0596f529ffcd = L.polyline(
+                [[-3.832713, -38.4916446], [-3.8301305, -38.4875383], [-3.8370287, -38.4822819], [-3.82637289, -38.47433135], [-3.82635425, -38.47426069], [-3.8194224, -38.4817816], [-3.821324, -38.4962057], [-3.8194034, -38.4963739], [-3.8185168, -38.4971878], [-3.8139469, -38.4994049], [-3.811962, -38.496844], [-3.8101342, -38.4938184]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b3fdab8b99d24324f670d8ad4003d786);
+        
+    
+            feature_group_b3fdab8b99d24324f670d8ad4003d786.addTo(map_d683966226d3ad3ecb00d5a373f77802);
+        
+    
+            var feature_group_a51a3c4651893a66452d428b92251f34 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_f67045cb9583ee7c2c34878a43980689 = L.marker(
+                [-3.80290818, -38.49478307],
+                {
+}
+            ).addTo(feature_group_a51a3c4651893a66452d428b92251f34);
+        
+    
+            var icon_ccac2ae0b5f15b8b90f5960e9e1ab10f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bd12ebcf6cd854549efa9fac869b5910 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_958ee099baeb962159615403ae48a7f8 = $(`<div id="html_958ee099baeb962159615403ae48a7f8" style="width: 100.0%; height: 100.0%;">CENTERBOX - PRQ IRACEMA</div>`)[0];
+                popup_bd12ebcf6cd854549efa9fac869b5910.setContent(html_958ee099baeb962159615403ae48a7f8);
+            
+        
+
+        marker_f67045cb9583ee7c2c34878a43980689.bindPopup(popup_bd12ebcf6cd854549efa9fac869b5910)
+        ;
+
+        
+    
+    
+                marker_f67045cb9583ee7c2c34878a43980689.setIcon(icon_ccac2ae0b5f15b8b90f5960e9e1ab10f);
+            
+    
+            var marker_02ed994f9ff2734b858f4b8e4a3800f5 = L.marker(
+                [-3.8030341, -38.4883391],
+                {
+}
+            ).addTo(feature_group_a51a3c4651893a66452d428b92251f34);
+        
+    
+            var icon_bc3b2d4f2e888f64ac20c3b8a4d0e4da = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d11da88379e9bb07fccace94cd132052 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_45d1a5f23680d8abf43fd60972d36ef4 = $(`<div id="html_45d1a5f23680d8abf43fd60972d36ef4" style="width: 100.0%; height: 100.0%;">SUPER LAGOA - CAMBEBA</div>`)[0];
+                popup_d11da88379e9bb07fccace94cd132052.setContent(html_45d1a5f23680d8abf43fd60972d36ef4);
+            
+        
+
+        marker_02ed994f9ff2734b858f4b8e4a3800f5.bindPopup(popup_d11da88379e9bb07fccace94cd132052)
+        ;
+
+        
+    
+    
+                marker_02ed994f9ff2734b858f4b8e4a3800f5.setIcon(icon_bc3b2d4f2e888f64ac20c3b8a4d0e4da);
+            
+    
+            var marker_efcb8f638838eaac9ac624245c60da55 = L.marker(
+                [-3.7955137, -38.4901664],
+                {
+}
+            ).addTo(feature_group_a51a3c4651893a66452d428b92251f34);
+        
+    
+            var icon_526d04961cfb3005dd7cbfb1332d5c63 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_62600b8971b9c7981e52a24a8526a7f4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f9a3c8c2d25ef621d5fdba252d672b15 = $(`<div id="html_f9a3c8c2d25ef621d5fdba252d672b15" style="width: 100.0%; height: 100.0%;">COMETA (OLIVEIRA PAIVA)</div>`)[0];
+                popup_62600b8971b9c7981e52a24a8526a7f4.setContent(html_f9a3c8c2d25ef621d5fdba252d672b15);
+            
+        
+
+        marker_efcb8f638838eaac9ac624245c60da55.bindPopup(popup_62600b8971b9c7981e52a24a8526a7f4)
+        ;
+
+        
+    
+    
+                marker_efcb8f638838eaac9ac624245c60da55.setIcon(icon_526d04961cfb3005dd7cbfb1332d5c63);
+            
+    
+            var marker_58da0ff7e2b623c1d578c9d5df28b568 = L.marker(
+                [-3.79612714, -38.49383649],
+                {
+}
+            ).addTo(feature_group_a51a3c4651893a66452d428b92251f34);
+        
+    
+            var icon_1a707a1e38f7a4e0182b9ffdb8d3272d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_996215c9bf21f98b5653d77546420036 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_280f7ded16718f7097754bab85883be3 = $(`<div id="html_280f7ded16718f7097754bab85883be3" style="width: 100.0%; height: 100.0%;">COMETA (PATIO OLIVEIRA PAIVA)</div>`)[0];
+                popup_996215c9bf21f98b5653d77546420036.setContent(html_280f7ded16718f7097754bab85883be3);
+            
+        
+
+        marker_58da0ff7e2b623c1d578c9d5df28b568.bindPopup(popup_996215c9bf21f98b5653d77546420036)
+        ;
+
+        
+    
+    
+                marker_58da0ff7e2b623c1d578c9d5df28b568.setIcon(icon_1a707a1e38f7a4e0182b9ffdb8d3272d);
+            
+    
+            var marker_ce3f5d5fbcdd9b781c7651b794e363db = L.marker(
+                [-3.7960364, -38.4990562],
+                {
+}
+            ).addTo(feature_group_a51a3c4651893a66452d428b92251f34);
+        
+    
+            var icon_78778f18e2a1ca39d4205aa1db83857b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_36ee38da381a2e1a0084bbfed7349156 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b97d25b2189da319e0138b539dbdb2dd = $(`<div id="html_b97d25b2189da319e0138b539dbdb2dd" style="width: 100.0%; height: 100.0%;">COMETA (JULIO LIMA)</div>`)[0];
+                popup_36ee38da381a2e1a0084bbfed7349156.setContent(html_b97d25b2189da319e0138b539dbdb2dd);
+            
+        
+
+        marker_ce3f5d5fbcdd9b781c7651b794e363db.bindPopup(popup_36ee38da381a2e1a0084bbfed7349156)
+        ;
+
+        
+    
+    
+                marker_ce3f5d5fbcdd9b781c7651b794e363db.setIcon(icon_78778f18e2a1ca39d4205aa1db83857b);
+            
+    
+            var marker_bee0b9cd1fc806ffbd66969a9a0c1b52 = L.marker(
+                [-3.7882169, -38.50204381],
+                {
+}
+            ).addTo(feature_group_a51a3c4651893a66452d428b92251f34);
+        
+    
+            var icon_9a61e2b05b0a830c86a68f100e4279b2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_906ab8312ad668d6fe88241b9b3ded51 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2345cdfd6f272c29d7bc32478f78e2cb = $(`<div id="html_2345cdfd6f272c29d7bc32478f78e2cb" style="width: 100.0%; height: 100.0%;">COMETA (JOSE LEON)</div>`)[0];
+                popup_906ab8312ad668d6fe88241b9b3ded51.setContent(html_2345cdfd6f272c29d7bc32478f78e2cb);
+            
+        
+
+        marker_bee0b9cd1fc806ffbd66969a9a0c1b52.bindPopup(popup_906ab8312ad668d6fe88241b9b3ded51)
+        ;
+
+        
+    
+    
+                marker_bee0b9cd1fc806ffbd66969a9a0c1b52.setIcon(icon_9a61e2b05b0a830c86a68f100e4279b2);
+            
+    
+            var marker_2b9efd29a171904748a4cc9b92df2b99 = L.marker(
+                [-3.7724462, -38.4988506],
+                {
+}
+            ).addTo(feature_group_a51a3c4651893a66452d428b92251f34);
+        
+    
+            var icon_2837f4aba8075cd83861df601635cafc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a9a8a62e52859e8eafb8b17722b4c176 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4ecaef507537719f024d2b9e2edd9347 = $(`<div id="html_4ecaef507537719f024d2b9e2edd9347" style="width: 100.0%; height: 100.0%;">PINHEIRO - ROGACIANO LEITE</div>`)[0];
+                popup_a9a8a62e52859e8eafb8b17722b4c176.setContent(html_4ecaef507537719f024d2b9e2edd9347);
+            
+        
+
+        marker_2b9efd29a171904748a4cc9b92df2b99.bindPopup(popup_a9a8a62e52859e8eafb8b17722b4c176)
+        ;
+
+        
+    
+    
+                marker_2b9efd29a171904748a4cc9b92df2b99.setIcon(icon_2837f4aba8075cd83861df601635cafc);
+            
+    
+            var marker_a9978176b99f9b19e66fe52c30c7d379 = L.marker(
+                [-3.7703181, -38.4872714],
+                {
+}
+            ).addTo(feature_group_a51a3c4651893a66452d428b92251f34);
+        
+    
+            var icon_a5e49e67bd67d831f7ffac2d68fba05a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5f2ce08a55006c01d505620092768e5e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4038e3a61f6a808ba3320235441a1a7d = $(`<div id="html_4038e3a61f6a808ba3320235441a1a7d" style="width: 100.0%; height: 100.0%;">FRANGOLANDIA - GUARARAPES</div>`)[0];
+                popup_5f2ce08a55006c01d505620092768e5e.setContent(html_4038e3a61f6a808ba3320235441a1a7d);
+            
+        
+
+        marker_a9978176b99f9b19e66fe52c30c7d379.bindPopup(popup_5f2ce08a55006c01d505620092768e5e)
+        ;
+
+        
+    
+    
+                marker_a9978176b99f9b19e66fe52c30c7d379.setIcon(icon_a5e49e67bd67d831f7ffac2d68fba05a);
+            
+    
+            var marker_20a313a0eb6c186ad719441fd4902f5d = L.marker(
+                [-3.772043, -38.4828363],
+                {
+}
+            ).addTo(feature_group_a51a3c4651893a66452d428b92251f34);
+        
+    
+            var icon_98f073f6b904897e097426b3fadb20c5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bfa490a0a2a290faae41a0c765a165e8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d670b4bcc8f947ee751b72274dbc6028 = $(`<div id="html_d670b4bcc8f947ee751b72274dbc6028" style="width: 100.0%; height: 100.0%;">PAO DE ACUCAR - LUCIANO CAVALCANTE (2374)</div>`)[0];
+                popup_bfa490a0a2a290faae41a0c765a165e8.setContent(html_d670b4bcc8f947ee751b72274dbc6028);
+            
+        
+
+        marker_20a313a0eb6c186ad719441fd4902f5d.bindPopup(popup_bfa490a0a2a290faae41a0c765a165e8)
+        ;
+
+        
+    
+    
+                marker_20a313a0eb6c186ad719441fd4902f5d.setIcon(icon_98f073f6b904897e097426b3fadb20c5);
+            
+    
+            var marker_fd2df348cfc3865e1604edc3fb10af4d = L.marker(
+                [-3.7888981, -38.4759777],
+                {
+}
+            ).addTo(feature_group_a51a3c4651893a66452d428b92251f34);
+        
+    
+            var icon_9dde1738a2f7d342a6ddc3ec4c7bf5c1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_22eacac1d3be39208312bae7cdf1623c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_14c42ad861c5a92d9898e5321bbe66f5 = $(`<div id="html_14c42ad861c5a92d9898e5321bbe66f5" style="width: 100.0%; height: 100.0%;">COMETA (ED BR SOARES)</div>`)[0];
+                popup_22eacac1d3be39208312bae7cdf1623c.setContent(html_14c42ad861c5a92d9898e5321bbe66f5);
+            
+        
+
+        marker_fd2df348cfc3865e1604edc3fb10af4d.bindPopup(popup_22eacac1d3be39208312bae7cdf1623c)
+        ;
+
+        
+    
+    
+                marker_fd2df348cfc3865e1604edc3fb10af4d.setIcon(icon_9dde1738a2f7d342a6ddc3ec4c7bf5c1);
+            
+    
+            var marker_e8ee07327f7d59e5f1b6633d0ce5a730 = L.marker(
+                [-3.7929617, -38.4806392],
+                {
+}
+            ).addTo(feature_group_a51a3c4651893a66452d428b92251f34);
+        
+    
+            var icon_52c2e5594c2f6ec8bc4de82af001bbef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1d55b7fc254263462410c68448c2b502 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f9ebf279ffe62735dc39cf293eb532e9 = $(`<div id="html_f9ebf279ffe62735dc39cf293eb532e9" style="width: 100.0%; height: 100.0%;">FRANGOLANDIA - MOLINA CENTER</div>`)[0];
+                popup_1d55b7fc254263462410c68448c2b502.setContent(html_f9ebf279ffe62735dc39cf293eb532e9);
+            
+        
+
+        marker_e8ee07327f7d59e5f1b6633d0ce5a730.bindPopup(popup_1d55b7fc254263462410c68448c2b502)
+        ;
+
+        
+    
+    
+                marker_e8ee07327f7d59e5f1b6633d0ce5a730.setIcon(icon_52c2e5594c2f6ec8bc4de82af001bbef);
+            
+    
+            var marker_17fb4f7584705aa99887120b6a3fd18c = L.marker(
+                [-3.8498382830873674, -38.396320939064026],
+                {
+}
+            ).addTo(feature_group_a51a3c4651893a66452d428b92251f34);
+        
+    
+            var icon_a77365c5e66f8c36147f51446a510d4d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_060a81906beb439d1e293bdf3963feab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_58ce3cb789a1a0cd3a0012a4c3b50e51 = $(`<div id="html_58ce3cb789a1a0cd3a0012a4c3b50e51" style="width: 100.0%; height: 100.0%;">PINHEIRO - PORTO DAS DUNAS</div>`)[0];
+                popup_060a81906beb439d1e293bdf3963feab.setContent(html_58ce3cb789a1a0cd3a0012a4c3b50e51);
+            
+        
+
+        marker_17fb4f7584705aa99887120b6a3fd18c.bindPopup(popup_060a81906beb439d1e293bdf3963feab)
+        ;
+
+        
+    
+    
+                marker_17fb4f7584705aa99887120b6a3fd18c.setIcon(icon_a77365c5e66f8c36147f51446a510d4d);
+            
+    
+            var poly_line_d1dd3954a69654313d2b7031ea1a365f = L.polyline(
+                [[-3.80290818, -38.49478307], [-3.8030341, -38.4883391], [-3.7955137, -38.4901664], [-3.79612714, -38.49383649], [-3.7960364, -38.4990562], [-3.7882169, -38.50204381], [-3.7724462, -38.4988506], [-3.7703181, -38.4872714], [-3.772043, -38.4828363], [-3.7888981, -38.4759777], [-3.7929617, -38.4806392], [-3.8498382830873674, -38.396320939064026]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a51a3c4651893a66452d428b92251f34);
+        
+    
+            feature_group_a51a3c4651893a66452d428b92251f34.addTo(map_d683966226d3ad3ecb00d5a373f77802);
+        
+    
+            var feature_group_e97eacb4425f42adb74468e4f5742a4a = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_45e051197d5324b8b0af81a841085cc1 = L.marker(
+                [-3.768427, -38.4936217],
+                {
+}
+            ).addTo(feature_group_e97eacb4425f42adb74468e4f5742a4a);
+        
+    
+            var icon_e3a8e310c1030dbec843e2bf4dee7ba5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fce2e69536f3165154f81736521d8b40 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd9ae966ce66dd188f9a5f1d6880a78b = $(`<div id="html_fd9ae966ce66dd188f9a5f1d6880a78b" style="width: 100.0%; height: 100.0%;">SUPER LAGOA - LUCIANO CAVALCANTE</div>`)[0];
+                popup_fce2e69536f3165154f81736521d8b40.setContent(html_fd9ae966ce66dd188f9a5f1d6880a78b);
+            
+        
+
+        marker_45e051197d5324b8b0af81a841085cc1.bindPopup(popup_fce2e69536f3165154f81736521d8b40)
+        ;
+
+        
+    
+    
+                marker_45e051197d5324b8b0af81a841085cc1.setIcon(icon_e3a8e310c1030dbec843e2bf4dee7ba5);
+            
+    
+            var marker_395e1c448afe3820091a78f305bef7e6 = L.marker(
+                [-3.761929, -38.4906592],
+                {
+}
+            ).addTo(feature_group_e97eacb4425f42adb74468e4f5742a4a);
+        
+    
+            var icon_8b823a5cd0cb21c2193e37abb8d0c7b4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_11f6093d3e9f190a1785d9c1c989e8a8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b5b33673c74081d4a15743684f7ccfc = $(`<div id="html_3b5b33673c74081d4a15743684f7ccfc" style="width: 100.0%; height: 100.0%;">SUPER DO POVO - GUARARAPES</div>`)[0];
+                popup_11f6093d3e9f190a1785d9c1c989e8a8.setContent(html_3b5b33673c74081d4a15743684f7ccfc);
+            
+        
+
+        marker_395e1c448afe3820091a78f305bef7e6.bindPopup(popup_11f6093d3e9f190a1785d9c1c989e8a8)
+        ;
+
+        
+    
+    
+                marker_395e1c448afe3820091a78f305bef7e6.setIcon(icon_8b823a5cd0cb21c2193e37abb8d0c7b4);
+            
+    
+            var marker_9eabeea0b08e39b236a0620df53d9ed7 = L.marker(
+                [-3.75451369, -38.48921518],
+                {
+}
+            ).addTo(feature_group_e97eacb4425f42adb74468e4f5742a4a);
+        
+    
+            var icon_f9c0331fb430e2a8ecf5101e333e6a61 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e1e3463ae3004785435ee3925f025b9d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_86ace9be33bc0f8502a2716b621618e8 = $(`<div id="html_86ace9be33bc0f8502a2716b621618e8" style="width: 100.0%; height: 100.0%;">PAO DE ACUCAR - IGUATEMI (1339)</div>`)[0];
+                popup_e1e3463ae3004785435ee3925f025b9d.setContent(html_86ace9be33bc0f8502a2716b621618e8);
+            
+        
+
+        marker_9eabeea0b08e39b236a0620df53d9ed7.bindPopup(popup_e1e3463ae3004785435ee3925f025b9d)
+        ;
+
+        
+    
+    
+                marker_9eabeea0b08e39b236a0620df53d9ed7.setIcon(icon_f9c0331fb430e2a8ecf5101e333e6a61);
+            
+    
+            var marker_b7d7ac931b52c3ad8072b512593e6347 = L.marker(
+                [-3.7495167, -38.490536],
+                {
+}
+            ).addTo(feature_group_e97eacb4425f42adb74468e4f5742a4a);
+        
+    
+            var icon_4f7c2924efe714b9ca22b0030388185c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_242d450da9e721880fd1d4c66447e956 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1eeaa978f8a845047f54a9e98d442c3f = $(`<div id="html_1eeaa978f8a845047f54a9e98d442c3f" style="width: 100.0%; height: 100.0%;">FRANGOLANDIA - COCO</div>`)[0];
+                popup_242d450da9e721880fd1d4c66447e956.setContent(html_1eeaa978f8a845047f54a9e98d442c3f);
+            
+        
+
+        marker_b7d7ac931b52c3ad8072b512593e6347.bindPopup(popup_242d450da9e721880fd1d4c66447e956)
+        ;
+
+        
+    
+    
+                marker_b7d7ac931b52c3ad8072b512593e6347.setIcon(icon_4f7c2924efe714b9ca22b0030388185c);
+            
+    
+            var marker_235c70f300c352e59a85fce583e0d559 = L.marker(
+                [-3.74784, -38.49493],
+                {
+}
+            ).addTo(feature_group_e97eacb4425f42adb74468e4f5742a4a);
+        
+    
+            var icon_8984c904063a57bf2fc6142f88d32c8c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_45fbf2063ef3768fa41043bf86bf503a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d15bf09e26e939f3959fd61abba52947 = $(`<div id="html_d15bf09e26e939f3959fd61abba52947" style="width: 100.0%; height: 100.0%;">PINHEIRO - ANTONIO SALES</div>`)[0];
+                popup_45fbf2063ef3768fa41043bf86bf503a.setContent(html_d15bf09e26e939f3959fd61abba52947);
+            
+        
+
+        marker_235c70f300c352e59a85fce583e0d559.bindPopup(popup_45fbf2063ef3768fa41043bf86bf503a)
+        ;
+
+        
+    
+    
+                marker_235c70f300c352e59a85fce583e0d559.setIcon(icon_8984c904063a57bf2fc6142f88d32c8c);
+            
+    
+            var marker_8cbeb3e70a28d10ec048e3c8d220b1f3 = L.marker(
+                [-3.745611, -38.495747],
+                {
+}
+            ).addTo(feature_group_e97eacb4425f42adb74468e4f5742a4a);
+        
+    
+            var icon_cb9d122ecbab836cad3189698e4c15bd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eb203d666b3699283c6a46a644723f29 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c2294c37a3c6bc0886fadbdb2d4ebf51 = $(`<div id="html_c2294c37a3c6bc0886fadbdb2d4ebf51" style="width: 100.0%; height: 100.0%;">COMETA (BENI CARVALHO)</div>`)[0];
+                popup_eb203d666b3699283c6a46a644723f29.setContent(html_c2294c37a3c6bc0886fadbdb2d4ebf51);
+            
+        
+
+        marker_8cbeb3e70a28d10ec048e3c8d220b1f3.bindPopup(popup_eb203d666b3699283c6a46a644723f29)
+        ;
+
+        
+    
+    
+                marker_8cbeb3e70a28d10ec048e3c8d220b1f3.setIcon(icon_cb9d122ecbab836cad3189698e4c15bd);
+            
+    
+            var marker_91dfe7656058e54982be927ff629b562 = L.marker(
+                [-3.7424091, -38.4867581],
+                {
+}
+            ).addTo(feature_group_e97eacb4425f42adb74468e4f5742a4a);
+        
+    
+            var icon_8fed7d3de173dd15aefff5c9699d17c9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1d8afccc8db259b5631074231744b251 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_125a767d3864bdef2fe040982f73478e = $(`<div id="html_125a767d3864bdef2fe040982f73478e" style="width: 100.0%; height: 100.0%;">CENTERBOX - CONCEITO</div>`)[0];
+                popup_1d8afccc8db259b5631074231744b251.setContent(html_125a767d3864bdef2fe040982f73478e);
+            
+        
+
+        marker_91dfe7656058e54982be927ff629b562.bindPopup(popup_1d8afccc8db259b5631074231744b251)
+        ;
+
+        
+    
+    
+                marker_91dfe7656058e54982be927ff629b562.setIcon(icon_8fed7d3de173dd15aefff5c9699d17c9);
+            
+    
+            var marker_73b3bd8272f924bdf3375a7f1f8768ec = L.marker(
+                [-3.7430401, -38.4859163],
+                {
+}
+            ).addTo(feature_group_e97eacb4425f42adb74468e4f5742a4a);
+        
+    
+            var icon_9274471227fc4a725df0cc16b48577e2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9823c00545dee9f4a645a92ec962557e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_60db390ed48b7db7e4408ce0730df0f9 = $(`<div id="html_60db390ed48b7db7e4408ce0730df0f9" style="width: 100.0%; height: 100.0%;">PAO DE ACUCAR - COCO (1253)</div>`)[0];
+                popup_9823c00545dee9f4a645a92ec962557e.setContent(html_60db390ed48b7db7e4408ce0730df0f9);
+            
+        
+
+        marker_73b3bd8272f924bdf3375a7f1f8768ec.bindPopup(popup_9823c00545dee9f4a645a92ec962557e)
+        ;
+
+        
+    
+    
+                marker_73b3bd8272f924bdf3375a7f1f8768ec.setIcon(icon_9274471227fc4a725df0cc16b48577e2);
+            
+    
+            var marker_4fe5e9b620935b254a3f050b3fbc61c9 = L.marker(
+                [-3.7429041, -38.4794315],
+                {
+}
+            ).addTo(feature_group_e97eacb4425f42adb74468e4f5742a4a);
+        
+    
+            var icon_77bea9fa5239ffe7b3e1ff15e8bac926 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_18975885e8886d36111641b9262a7a8c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9c46b81c54ec9b86b35784869ea9f2d6 = $(`<div id="html_9c46b81c54ec9b86b35784869ea9f2d6" style="width: 100.0%; height: 100.0%;">FRANGOLANDIA - SANTOS DUMONT</div>`)[0];
+                popup_18975885e8886d36111641b9262a7a8c.setContent(html_9c46b81c54ec9b86b35784869ea9f2d6);
+            
+        
+
+        marker_4fe5e9b620935b254a3f050b3fbc61c9.bindPopup(popup_18975885e8886d36111641b9262a7a8c)
+        ;
+
+        
+    
+    
+                marker_4fe5e9b620935b254a3f050b3fbc61c9.setIcon(icon_77bea9fa5239ffe7b3e1ff15e8bac926);
+            
+    
+            var marker_540050f6fea7a353aa63b73720006785 = L.marker(
+                [-3.7440842, -38.4749343],
+                {
+}
+            ).addTo(feature_group_e97eacb4425f42adb74468e4f5742a4a);
+        
+    
+            var icon_447876ddd58484fc826177fe525c83f0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d1d4ef041f0945d0c9a10a324e2b203e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_de57451f9ca733c92a54bfa22308fb4d = $(`<div id="html_de57451f9ca733c92a54bfa22308fb4d" style="width: 100.0%; height: 100.0%;">CENTERBOX - SANTOS DUMONT</div>`)[0];
+                popup_d1d4ef041f0945d0c9a10a324e2b203e.setContent(html_de57451f9ca733c92a54bfa22308fb4d);
+            
+        
+
+        marker_540050f6fea7a353aa63b73720006785.bindPopup(popup_d1d4ef041f0945d0c9a10a324e2b203e)
+        ;
+
+        
+    
+    
+                marker_540050f6fea7a353aa63b73720006785.setIcon(icon_447876ddd58484fc826177fe525c83f0);
+            
+    
+            var marker_d993449919926be29d78cffd85d4f160 = L.marker(
+                [-3.7500747, -38.4719109],
+                {
+}
+            ).addTo(feature_group_e97eacb4425f42adb74468e4f5742a4a);
+        
+    
+            var icon_24166b86572c537ea690569f76316873 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_739b063f7ca178663c7bb2aaf50228d2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f701fe20754d3ac8fa1c05574dfb2d41 = $(`<div id="html_f701fe20754d3ac8fa1c05574dfb2d41" style="width: 100.0%; height: 100.0%;">SUPER LAGOA - CIDADE 2000</div>`)[0];
+                popup_739b063f7ca178663c7bb2aaf50228d2.setContent(html_f701fe20754d3ac8fa1c05574dfb2d41);
+            
+        
+
+        marker_d993449919926be29d78cffd85d4f160.bindPopup(popup_739b063f7ca178663c7bb2aaf50228d2)
+        ;
+
+        
+    
+    
+                marker_d993449919926be29d78cffd85d4f160.setIcon(icon_24166b86572c537ea690569f76316873);
+            
+    
+            var marker_c7dc24d111d3b0613136ba7ae2300040 = L.marker(
+                [-3.7354447, -38.4816158],
+                {
+}
+            ).addTo(feature_group_e97eacb4425f42adb74468e4f5742a4a);
+        
+    
+            var icon_e2abedccd98494b8af31c4d1177efe55 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cce7f53c40328c012ac4ae30f88548ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_da6683e7a538ee0dce3d7461152b7572 = $(`<div id="html_da6683e7a538ee0dce3d7461152b7572" style="width: 100.0%; height: 100.0%;">COMETA (ENGENHEIRO SANTANA JR)</div>`)[0];
+                popup_cce7f53c40328c012ac4ae30f88548ab.setContent(html_da6683e7a538ee0dce3d7461152b7572);
+            
+        
+
+        marker_c7dc24d111d3b0613136ba7ae2300040.bindPopup(popup_cce7f53c40328c012ac4ae30f88548ab)
+        ;
+
+        
+    
+    
+                marker_c7dc24d111d3b0613136ba7ae2300040.setIcon(icon_e2abedccd98494b8af31c4d1177efe55);
+            
+    
+            var poly_line_cdddb8e4f13e2af1d8dbcdc782ceb55d = L.polyline(
+                [[-3.768427, -38.4936217], [-3.761929, -38.4906592], [-3.75451369, -38.48921518], [-3.7495167, -38.490536], [-3.74784, -38.49493], [-3.745611, -38.495747], [-3.7424091, -38.4867581], [-3.7430401, -38.4859163], [-3.7429041, -38.4794315], [-3.7440842, -38.4749343], [-3.7500747, -38.4719109], [-3.7354447, -38.4816158]],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkred", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e97eacb4425f42adb74468e4f5742a4a);
+        
+    
+            feature_group_e97eacb4425f42adb74468e4f5742a4a.addTo(map_d683966226d3ad3ecb00d5a373f77802);
+        
+    
+            var feature_group_2ebe0fa69afb12369a471f09e3ab372d = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_41d95c122d65d4a8bacaadfcdc3509b0 = L.marker(
+                [-3.7394701, -38.4895647],
+                {
+}
+            ).addTo(feature_group_2ebe0fa69afb12369a471f09e3ab372d);
+        
+    
+            var icon_f2db4ba3c64fa7fd0d1532ca231f96db = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cc76663eaf790bfc280cf4ac3349e453 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9830ea864ebe5fe4d126a1c79e6484d8 = $(`<div id="html_9830ea864ebe5fe4d126a1c79e6484d8" style="width: 100.0%; height: 100.0%;">SUPER LAGOA - SANTOS DUMONT</div>`)[0];
+                popup_cc76663eaf790bfc280cf4ac3349e453.setContent(html_9830ea864ebe5fe4d126a1c79e6484d8);
+            
+        
+
+        marker_41d95c122d65d4a8bacaadfcdc3509b0.bindPopup(popup_cc76663eaf790bfc280cf4ac3349e453)
+        ;
+
+        
+    
+    
+                marker_41d95c122d65d4a8bacaadfcdc3509b0.setIcon(icon_f2db4ba3c64fa7fd0d1532ca231f96db);
+            
+    
+            var marker_a3806c4851763d906c4ec3b5ee5e1fc3 = L.marker(
+                [-3.7344387, -38.4922603],
+                {
+}
+            ).addTo(feature_group_2ebe0fa69afb12369a471f09e3ab372d);
+        
+    
+            var icon_a0ea8af9a320467235f712087909850a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_028df9be0bfb49edf2db4bc940f0b13b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a048309a32214a5cf83814c647c33ab1 = $(`<div id="html_a048309a32214a5cf83814c647c33ab1" style="width: 100.0%; height: 100.0%;">COMETA (VIRGILIO TAVORA)</div>`)[0];
+                popup_028df9be0bfb49edf2db4bc940f0b13b.setContent(html_a048309a32214a5cf83814c647c33ab1);
+            
+        
+
+        marker_a3806c4851763d906c4ec3b5ee5e1fc3.bindPopup(popup_028df9be0bfb49edf2db4bc940f0b13b)
+        ;
+
+        
+    
+    
+                marker_a3806c4851763d906c4ec3b5ee5e1fc3.setIcon(icon_a0ea8af9a320467235f712087909850a);
+            
+    
+            var marker_f0566da6b9836fcea905f4476c977b79 = L.marker(
+                [-3.7321668, -38.4886676],
+                {
+}
+            ).addTo(feature_group_2ebe0fa69afb12369a471f09e3ab372d);
+        
+    
+            var icon_e2b7e38d15ae6bff9bea5f40cf4778ab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8d335fb10555062b590411ddd9c47d96 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_34f5f3974836aef68dddf3d9dea159b4 = $(`<div id="html_34f5f3974836aef68dddf3d9dea159b4" style="width: 100.0%; height: 100.0%;">FRANGOLANDIA - VARJOTA</div>`)[0];
+                popup_8d335fb10555062b590411ddd9c47d96.setContent(html_34f5f3974836aef68dddf3d9dea159b4);
+            
+        
+
+        marker_f0566da6b9836fcea905f4476c977b79.bindPopup(popup_8d335fb10555062b590411ddd9c47d96)
+        ;
+
+        
+    
+    
+                marker_f0566da6b9836fcea905f4476c977b79.setIcon(icon_e2b7e38d15ae6bff9bea5f40cf4778ab);
+            
+    
+            var marker_361bc64f543981d9ec9aa8a0ec8cf2dc = L.marker(
+                [-3.7277865, -38.4862037],
+                {
+}
+            ).addTo(feature_group_2ebe0fa69afb12369a471f09e3ab372d);
+        
+    
+            var icon_87e2741a5fca4a700b903930f993e9d7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4e9b88e5aeeeee06db9b20381516824c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d651918fefdcea517d5861d802957519 = $(`<div id="html_d651918fefdcea517d5861d802957519" style="width: 100.0%; height: 100.0%;">PAO DE ACUCAR - MUCURIPE (1257)</div>`)[0];
+                popup_4e9b88e5aeeeee06db9b20381516824c.setContent(html_d651918fefdcea517d5861d802957519);
+            
+        
+
+        marker_361bc64f543981d9ec9aa8a0ec8cf2dc.bindPopup(popup_4e9b88e5aeeeee06db9b20381516824c)
+        ;
+
+        
+    
+    
+                marker_361bc64f543981d9ec9aa8a0ec8cf2dc.setIcon(icon_87e2741a5fca4a700b903930f993e9d7);
+            
+    
+            var marker_0fe76312f344a7ebe55f7c35d37740a5 = L.marker(
+                [-3.7274751, -38.4937798],
+                {
+}
+            ).addTo(feature_group_2ebe0fa69afb12369a471f09e3ab372d);
+        
+    
+            var icon_2a3b884be1cdad1277399d23b4377b52 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_39943cf0fae2c302ebf13afd255e1bef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ec22d2dc63c300d9cf6bcee9cd891e25 = $(`<div id="html_ec22d2dc63c300d9cf6bcee9cd891e25" style="width: 100.0%; height: 100.0%;">PAO DE ACUCAR - NAUTICO (1004)</div>`)[0];
+                popup_39943cf0fae2c302ebf13afd255e1bef.setContent(html_ec22d2dc63c300d9cf6bcee9cd891e25);
+            
+        
+
+        marker_0fe76312f344a7ebe55f7c35d37740a5.bindPopup(popup_39943cf0fae2c302ebf13afd255e1bef)
+        ;
+
+        
+    
+    
+                marker_0fe76312f344a7ebe55f7c35d37740a5.setIcon(icon_2a3b884be1cdad1277399d23b4377b52);
+            
+    
+            var marker_27becf27b2d6338be7bb7ffbdf6f0895 = L.marker(
+                [-3.7373679, -38.4974441],
+                {
+}
+            ).addTo(feature_group_2ebe0fa69afb12369a471f09e3ab372d);
+        
+    
+            var icon_1936d6c0c7de340f4c57c55db5d03af3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c1ab38c409036da46701ff6c48f87194 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_38893020b5c3bb5d10fe2269409329dc = $(`<div id="html_38893020b5c3bb5d10fe2269409329dc" style="width: 100.0%; height: 100.0%;">PAO DE ACUCAR - CENTER UM (1209)</div>`)[0];
+                popup_c1ab38c409036da46701ff6c48f87194.setContent(html_38893020b5c3bb5d10fe2269409329dc);
+            
+        
+
+        marker_27becf27b2d6338be7bb7ffbdf6f0895.bindPopup(popup_c1ab38c409036da46701ff6c48f87194)
+        ;
+
+        
+    
+    
+                marker_27becf27b2d6338be7bb7ffbdf6f0895.setIcon(icon_1936d6c0c7de340f4c57c55db5d03af3);
+            
+    
+            var marker_46494633947cda42a0d8f3ac96b03f46 = L.marker(
+                [-3.7411919, -38.4958533],
+                {
+}
+            ).addTo(feature_group_2ebe0fa69afb12369a471f09e3ab372d);
+        
+    
+            var icon_d1d999c326b0d75d8ee4616bfc2ba2dc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cfe6932a528c2eb3db077d8f177ba976 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_629a4e8b840c27c4b0584935d95f81f6 = $(`<div id="html_629a4e8b840c27c4b0584935d95f81f6" style="width: 100.0%; height: 100.0%;">COMETA (PE ANTONIO TOMAS)</div>`)[0];
+                popup_cfe6932a528c2eb3db077d8f177ba976.setContent(html_629a4e8b840c27c4b0584935d95f81f6);
+            
+        
+
+        marker_46494633947cda42a0d8f3ac96b03f46.bindPopup(popup_cfe6932a528c2eb3db077d8f177ba976)
+        ;
+
+        
+    
+    
+                marker_46494633947cda42a0d8f3ac96b03f46.setIcon(icon_d1d999c326b0d75d8ee4616bfc2ba2dc);
+            
+    
+            var marker_8d094f56fc0865d9557b0ea13e21872a = L.marker(
+                [-3.7358277, -38.5013099],
+                {
+}
+            ).addTo(feature_group_2ebe0fa69afb12369a471f09e3ab372d);
+        
+    
+            var icon_0a90d28589309786bfba49316c73d0e3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_18853d8811e34763f5d83f7a008407f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_958971899767ba8389c114109f6e5464 = $(`<div id="html_958971899767ba8389c114109f6e5464" style="width: 100.0%; height: 100.0%;">FRANGOLANDIA - ALDEOTA</div>`)[0];
+                popup_18853d8811e34763f5d83f7a008407f1.setContent(html_958971899767ba8389c114109f6e5464);
+            
+        
+
+        marker_8d094f56fc0865d9557b0ea13e21872a.bindPopup(popup_18853d8811e34763f5d83f7a008407f1)
+        ;
+
+        
+    
+    
+                marker_8d094f56fc0865d9557b0ea13e21872a.setIcon(icon_0a90d28589309786bfba49316c73d0e3);
+            
+    
+            var marker_e7926322984d907c8ed9dcb29bb7f4be = L.marker(
+                [-3.7411822, -38.5041525],
+                {
+}
+            ).addTo(feature_group_2ebe0fa69afb12369a471f09e3ab372d);
+        
+    
+            var icon_9bcf93c64d5000c1f7361871f78f5749 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_305632d241437f11873a423025f80682 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_79c56cb6b875dcb1055e689fb67baeb6 = $(`<div id="html_79c56cb6b875dcb1055e689fb67baeb6" style="width: 100.0%; height: 100.0%;">COMETA (TIBURCIO CAVALCANTE)</div>`)[0];
+                popup_305632d241437f11873a423025f80682.setContent(html_79c56cb6b875dcb1055e689fb67baeb6);
+            
+        
+
+        marker_e7926322984d907c8ed9dcb29bb7f4be.bindPopup(popup_305632d241437f11873a423025f80682)
+        ;
+
+        
+    
+    
+                marker_e7926322984d907c8ed9dcb29bb7f4be.setIcon(icon_9bcf93c64d5000c1f7361871f78f5749);
+            
+    
+            var marker_6a8d78733973141bbc0a7a3c4fa7820a = L.marker(
+                [-3.7399659, -38.5075747],
+                {
+}
+            ).addTo(feature_group_2ebe0fa69afb12369a471f09e3ab372d);
+        
+    
+            var icon_e6338c1b5a1531a70e7d527ad93df118 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5f48febf1769ce0bf641308e19db6ebd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_473e87e82ad04929100c027c62125ce0 = $(`<div id="html_473e87e82ad04929100c027c62125ce0" style="width: 100.0%; height: 100.0%;">PAO DE ACUCAR - JULIO VENTURA (1252)</div>`)[0];
+                popup_5f48febf1769ce0bf641308e19db6ebd.setContent(html_473e87e82ad04929100c027c62125ce0);
+            
+        
+
+        marker_6a8d78733973141bbc0a7a3c4fa7820a.bindPopup(popup_5f48febf1769ce0bf641308e19db6ebd)
+        ;
+
+        
+    
+    
+                marker_6a8d78733973141bbc0a7a3c4fa7820a.setIcon(icon_e6338c1b5a1531a70e7d527ad93df118);
+            
+    
+            var marker_eb6b38868acbdcc4853b7a90dc0ef351 = L.marker(
+                [-3.7440036, -38.5080673],
+                {
+}
+            ).addTo(feature_group_2ebe0fa69afb12369a471f09e3ab372d);
+        
+    
+            var icon_2a1d6e9bc4e3cd9dff82bc0b06e91c15 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1ab7139a6afd4c52df236df8598bb21c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a61567f89810ee5650765929d4c97f8d = $(`<div id="html_a61567f89810ee5650765929d4c97f8d" style="width: 100.0%; height: 100.0%;">COMETA (ANTONIO SALES)</div>`)[0];
+                popup_1ab7139a6afd4c52df236df8598bb21c.setContent(html_a61567f89810ee5650765929d4c97f8d);
+            
+        
+
+        marker_eb6b38868acbdcc4853b7a90dc0ef351.bindPopup(popup_1ab7139a6afd4c52df236df8598bb21c)
+        ;
+
+        
+    
+    
+                marker_eb6b38868acbdcc4853b7a90dc0ef351.setIcon(icon_2a1d6e9bc4e3cd9dff82bc0b06e91c15);
+            
+    
+            var marker_394224aa28ca3c097b75dbad3b596c30 = L.marker(
+                [-3.746295, -38.5125923],
+                {
+}
+            ).addTo(feature_group_2ebe0fa69afb12369a471f09e3ab372d);
+        
+    
+            var icon_ebe97b38c86d3c146b163cfc30388843 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightred",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_479dd37923237fcefb396faf09cbca29 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_91d100ef6ed52b150b30b64c50b0e58f = $(`<div id="html_91d100ef6ed52b150b30b64c50b0e58f" style="width: 100.0%; height: 100.0%;">FRANGOLANDIA - RUI BARBOSA</div>`)[0];
+                popup_479dd37923237fcefb396faf09cbca29.setContent(html_91d100ef6ed52b150b30b64c50b0e58f);
+            
+        
+
+        marker_394224aa28ca3c097b75dbad3b596c30.bindPopup(popup_479dd37923237fcefb396faf09cbca29)
+        ;
+
+        
+    
+    
+                marker_394224aa28ca3c097b75dbad3b596c30.setIcon(icon_ebe97b38c86d3c146b163cfc30388843);
+            
+    
+            var poly_line_46438161ae21b875bb3e27b98880f033 = L.polyline(
+                [[-3.7394701, -38.4895647], [-3.7344387, -38.4922603], [-3.7321668, -38.4886676], [-3.7277865, -38.4862037], [-3.7274751, -38.4937798], [-3.7373679, -38.4974441], [-3.7411919, -38.4958533], [-3.7358277, -38.5013099], [-3.7411822, -38.5041525], [-3.7399659, -38.5075747], [-3.7440036, -38.5080673], [-3.746295, -38.5125923]],
+                {"bubblingMouseEvents": true, "color": "lightred", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "lightred", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2ebe0fa69afb12369a471f09e3ab372d);
+        
+    
+            feature_group_2ebe0fa69afb12369a471f09e3ab372d.addTo(map_d683966226d3ad3ecb00d5a373f77802);
+        
+    
+            var feature_group_cc54868988bc2b59136da3a955e54e29 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_02edba4da5817021b58ced932c9478e0 = L.marker(
+                [-3.7426267, -38.5125024],
+                {
+}
+            ).addTo(feature_group_cc54868988bc2b59136da3a955e54e29);
+        
+    
+            var icon_5cfd97ef68304eb87c7ce47ab1388675 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_78215d8cf89f269311523fe89fe6101c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c38f8288c8d56878cc1b27ed6c07458d = $(`<div id="html_c38f8288c8d56878cc1b27ed6c07458d" style="width: 100.0%; height: 100.0%;">SUPER DO POVO - MINI MARKET</div>`)[0];
+                popup_78215d8cf89f269311523fe89fe6101c.setContent(html_c38f8288c8d56878cc1b27ed6c07458d);
+            
+        
+
+        marker_02edba4da5817021b58ced932c9478e0.bindPopup(popup_78215d8cf89f269311523fe89fe6101c)
+        ;
+
+        
+    
+    
+                marker_02edba4da5817021b58ced932c9478e0.setIcon(icon_5cfd97ef68304eb87c7ce47ab1388675);
+            
+    
+            var marker_7b41aea59968699a3d0c6bdd12f4bbab = L.marker(
+                [-3.7407932, -38.516113],
+                {
+}
+            ).addTo(feature_group_cc54868988bc2b59136da3a955e54e29);
+        
+    
+            var icon_30106ab6414da3331fc5817aa80f6389 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_97ea6fcdf59b8479b7d969ab8bab5b30 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f97880825df41993ae7992b1759a1e51 = $(`<div id="html_f97880825df41993ae7992b1759a1e51" style="width: 100.0%; height: 100.0%;">COMETA (ILDEFONSO ALBANO)</div>`)[0];
+                popup_97ea6fcdf59b8479b7d969ab8bab5b30.setContent(html_f97880825df41993ae7992b1759a1e51);
+            
+        
+
+        marker_7b41aea59968699a3d0c6bdd12f4bbab.bindPopup(popup_97ea6fcdf59b8479b7d969ab8bab5b30)
+        ;
+
+        
+    
+    
+                marker_7b41aea59968699a3d0c6bdd12f4bbab.setIcon(icon_30106ab6414da3331fc5817aa80f6389);
+            
+    
+            var marker_02a7bf40d22d4b4a2f4d368f95aaefa9 = L.marker(
+                [-3.7374817, -38.5204755],
+                {
+}
+            ).addTo(feature_group_cc54868988bc2b59136da3a955e54e29);
+        
+    
+            var icon_bcb36d7a4f221607d0d08f36955803ad = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_96b4db014ca15db6ff5150e337487723 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5a89e096c010f75f2c8e4f87f350155c = $(`<div id="html_5a89e096c010f75f2c8e4f87f350155c" style="width: 100.0%; height: 100.0%;">COMETA (J DA PENHA)</div>`)[0];
+                popup_96b4db014ca15db6ff5150e337487723.setContent(html_5a89e096c010f75f2c8e4f87f350155c);
+            
+        
+
+        marker_02a7bf40d22d4b4a2f4d368f95aaefa9.bindPopup(popup_96b4db014ca15db6ff5150e337487723)
+        ;
+
+        
+    
+    
+                marker_02a7bf40d22d4b4a2f4d368f95aaefa9.setIcon(icon_bcb36d7a4f221607d0d08f36955803ad);
+            
+    
+            var marker_410bae683be1b32975d6419718a47508 = L.marker(
+                [-3.7338116, -38.5136501],
+                {
+}
+            ).addTo(feature_group_cc54868988bc2b59136da3a955e54e29);
+        
+    
+            var icon_82bde23945f1b25d8cca944034189e1f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b7d435dbedda54624e872a17d1ee449a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_74f61841d688dd8bc05520ed86112eb0 = $(`<div id="html_74f61841d688dd8bc05520ed86112eb0" style="width: 100.0%; height: 100.0%;">COMETA (PINTO MADEIRA)</div>`)[0];
+                popup_b7d435dbedda54624e872a17d1ee449a.setContent(html_74f61841d688dd8bc05520ed86112eb0);
+            
+        
+
+        marker_410bae683be1b32975d6419718a47508.bindPopup(popup_b7d435dbedda54624e872a17d1ee449a)
+        ;
+
+        
+    
+    
+                marker_410bae683be1b32975d6419718a47508.setIcon(icon_82bde23945f1b25d8cca944034189e1f);
+            
+    
+            var marker_46c827349c750b18e1dfa78fafc9bafd = L.marker(
+                [-3.7306636, -38.5131575],
+                {
+}
+            ).addTo(feature_group_cc54868988bc2b59136da3a955e54e29);
+        
+    
+            var icon_c4959408877470a1aed8980d735b6011 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fd5417bc3d4308dd0e94e6c8b3565963 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7268db6ffe87dd70e192fa4eeb5543a0 = $(`<div id="html_7268db6ffe87dd70e192fa4eeb5543a0" style="width: 100.0%; height: 100.0%;">PAO DE ACUCAR - SANTOS DUMONT (1220)</div>`)[0];
+                popup_fd5417bc3d4308dd0e94e6c8b3565963.setContent(html_7268db6ffe87dd70e192fa4eeb5543a0);
+            
+        
+
+        marker_46c827349c750b18e1dfa78fafc9bafd.bindPopup(popup_fd5417bc3d4308dd0e94e6c8b3565963)
+        ;
+
+        
+    
+    
+                marker_46c827349c750b18e1dfa78fafc9bafd.setIcon(icon_c4959408877470a1aed8980d735b6011);
+            
+    
+            var marker_0ee7dfe18ce651df541c18cb0ec5383c = L.marker(
+                [-3.730295, -38.512375],
+                {
+}
+            ).addTo(feature_group_cc54868988bc2b59136da3a955e54e29);
+        
+    
+            var icon_3897c3031452294d0a790f50df7912e2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3003e5798edcbebd9d4b38c6019bb5e7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_86b72f2bd145cb095b3a60b7e381c139 = $(`<div id="html_86b72f2bd145cb095b3a60b7e381c139" style="width: 100.0%; height: 100.0%;">FRANGOLANDIA - COSTA BARROS</div>`)[0];
+                popup_3003e5798edcbebd9d4b38c6019bb5e7.setContent(html_86b72f2bd145cb095b3a60b7e381c139);
+            
+        
+
+        marker_0ee7dfe18ce651df541c18cb0ec5383c.bindPopup(popup_3003e5798edcbebd9d4b38c6019bb5e7)
+        ;
+
+        
+    
+    
+                marker_0ee7dfe18ce651df541c18cb0ec5383c.setIcon(icon_3897c3031452294d0a790f50df7912e2);
+            
+    
+            var marker_f881df43f62f504184d147115db99921 = L.marker(
+                [-3.7237615, -38.513129],
+                {
+}
+            ).addTo(feature_group_cc54868988bc2b59136da3a955e54e29);
+        
+    
+            var icon_7ef2155a7d5cc0f4d470656a5e597f0a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e82992189bad6ae4a04ff07424286fff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_25e11aa2542a1d57feaeeb8925d728e2 = $(`<div id="html_25e11aa2542a1d57feaeeb8925d728e2" style="width: 100.0%; height: 100.0%;">PINHEIRO - PRAIA DE IRACEMA</div>`)[0];
+                popup_e82992189bad6ae4a04ff07424286fff.setContent(html_25e11aa2542a1d57feaeeb8925d728e2);
+            
+        
+
+        marker_f881df43f62f504184d147115db99921.bindPopup(popup_e82992189bad6ae4a04ff07424286fff)
+        ;
+
+        
+    
+    
+                marker_f881df43f62f504184d147115db99921.setIcon(icon_7ef2155a7d5cc0f4d470656a5e597f0a);
+            
+    
+            var marker_9f728f05dbbf930a0a0a08dc5e1d1f71 = L.marker(
+                [-3.7316219, -38.5268458],
+                {
+}
+            ).addTo(feature_group_cc54868988bc2b59136da3a955e54e29);
+        
+    
+            var icon_e42a6b2f910100cc193b56c68d56c2cc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d82fc4660008bc7fd341ee2fc817a06d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_63c667fcdd0e51440b59297703f8b740 = $(`<div id="html_63c667fcdd0e51440b59297703f8b740" style="width: 100.0%; height: 100.0%;">SUPER LAGOA - CENTRO</div>`)[0];
+                popup_d82fc4660008bc7fd341ee2fc817a06d.setContent(html_63c667fcdd0e51440b59297703f8b740);
+            
+        
+
+        marker_9f728f05dbbf930a0a0a08dc5e1d1f71.bindPopup(popup_d82fc4660008bc7fd341ee2fc817a06d)
+        ;
+
+        
+    
+    
+                marker_9f728f05dbbf930a0a0a08dc5e1d1f71.setIcon(icon_e42a6b2f910100cc193b56c68d56c2cc);
+            
+    
+            var marker_3e502ef15115b0faa7d47dd488750310 = L.marker(
+                [-3.748629, -38.5229264],
+                {
+}
+            ).addTo(feature_group_cc54868988bc2b59136da3a955e54e29);
+        
+    
+            var icon_04781f15fe3af9ce18d37a37a9d6ae4a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4e147feb26b2385653fe56a50a138ed6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a1c3402fe12b5ec071cfae2c99812762 = $(`<div id="html_a1c3402fe12b5ec071cfae2c99812762" style="width: 100.0%; height: 100.0%;">PAO DE ACUCAR - AGUANAMBI (1398)</div>`)[0];
+                popup_4e147feb26b2385653fe56a50a138ed6.setContent(html_a1c3402fe12b5ec071cfae2c99812762);
+            
+        
+
+        marker_3e502ef15115b0faa7d47dd488750310.bindPopup(popup_4e147feb26b2385653fe56a50a138ed6)
+        ;
+
+        
+    
+    
+                marker_3e502ef15115b0faa7d47dd488750310.setIcon(icon_04781f15fe3af9ce18d37a37a9d6ae4a);
+            
+    
+            var marker_a3f851b0ccb5bd768bad89ae2580d987 = L.marker(
+                [-3.7495749, -38.5285489],
+                {
+}
+            ).addTo(feature_group_cc54868988bc2b59136da3a955e54e29);
+        
+    
+            var icon_237add6a8b986859ff1939acda0f7755 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f842dab7117132e01aa9f21ebb776557 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd0299e2a32c49d4c1a611521006d137 = $(`<div id="html_dd0299e2a32c49d4c1a611521006d137" style="width: 100.0%; height: 100.0%;">COMETA (TREZE DE MAIO)</div>`)[0];
+                popup_f842dab7117132e01aa9f21ebb776557.setContent(html_dd0299e2a32c49d4c1a611521006d137);
+            
+        
+
+        marker_a3f851b0ccb5bd768bad89ae2580d987.bindPopup(popup_f842dab7117132e01aa9f21ebb776557)
+        ;
+
+        
+    
+    
+                marker_a3f851b0ccb5bd768bad89ae2580d987.setIcon(icon_237add6a8b986859ff1939acda0f7755);
+            
+    
+            var marker_b6c7eb40795db857ca60b94ce1b3dd8e = L.marker(
+                [-3.7532492, -38.5276962],
+                {
+}
+            ).addTo(feature_group_cc54868988bc2b59136da3a955e54e29);
+        
+    
+            var icon_9022c2eed95824bf3ca53455a4b6abf3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_09349659dd0e59ebad024d11250dcb85 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_83379b0078d0b525954df9bfb8f389f3 = $(`<div id="html_83379b0078d0b525954df9bfb8f389f3" style="width: 100.0%; height: 100.0%;">COMETA (FATIMA)</div>`)[0];
+                popup_09349659dd0e59ebad024d11250dcb85.setContent(html_83379b0078d0b525954df9bfb8f389f3);
+            
+        
+
+        marker_b6c7eb40795db857ca60b94ce1b3dd8e.bindPopup(popup_09349659dd0e59ebad024d11250dcb85)
+        ;
+
+        
+    
+    
+                marker_b6c7eb40795db857ca60b94ce1b3dd8e.setIcon(icon_9022c2eed95824bf3ca53455a4b6abf3);
+            
+    
+            var marker_8a6ccc3fdeffbf51633f860fd6a266a4 = L.marker(
+                [-3.7555418, -38.5303956],
+                {
+}
+            ).addTo(feature_group_cc54868988bc2b59136da3a955e54e29);
+        
+    
+            var icon_47c232384d5230f8ea3b80883d9b0e94 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0c8e2235de4dde61799d785bafb0a4eb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a5fff53402bab8a9bcdc2fea3f46db03 = $(`<div id="html_a5fff53402bab8a9bcdc2fea3f46db03" style="width: 100.0%; height: 100.0%;">EXTRA - RODOVIARIA (1404)</div>`)[0];
+                popup_0c8e2235de4dde61799d785bafb0a4eb.setContent(html_a5fff53402bab8a9bcdc2fea3f46db03);
+            
+        
+
+        marker_8a6ccc3fdeffbf51633f860fd6a266a4.bindPopup(popup_0c8e2235de4dde61799d785bafb0a4eb)
+        ;
+
+        
+    
+    
+                marker_8a6ccc3fdeffbf51633f860fd6a266a4.setIcon(icon_47c232384d5230f8ea3b80883d9b0e94);
+            
+    
+            var poly_line_b50d7110b35b5f5938f7203036116ff1 = L.polyline(
+                [[-3.7426267, -38.5125024], [-3.7407932, -38.516113], [-3.7374817, -38.5204755], [-3.7338116, -38.5136501], [-3.7306636, -38.5131575], [-3.730295, -38.512375], [-3.7237615, -38.513129], [-3.7316219, -38.5268458], [-3.748629, -38.5229264], [-3.7495749, -38.5285489], [-3.7532492, -38.5276962], [-3.7555418, -38.5303956]],
+                {"bubblingMouseEvents": true, "color": "beige", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "beige", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_cc54868988bc2b59136da3a955e54e29);
+        
+    
+            feature_group_cc54868988bc2b59136da3a955e54e29.addTo(map_d683966226d3ad3ecb00d5a373f77802);
+        
+    
+            var feature_group_940380fe910b7ec6433c31eabb9ad48a = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_856c4a62d9b1c7ce4daf58d1490044e4 = L.marker(
+                [-3.746476, -38.5313805],
+                {
+}
+            ).addTo(feature_group_940380fe910b7ec6433c31eabb9ad48a);
+        
+    
+            var icon_83c2e75825038b684c404c33cf703cb6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7f44a570d0c66584fd92f9933417d8c4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9291da90af7bef54b60d1bfddda13bcc = $(`<div id="html_9291da90af7bef54b60d1bfddda13bcc" style="width: 100.0%; height: 100.0%;">PAO DE ACUCAR - FATIMA (0255)</div>`)[0];
+                popup_7f44a570d0c66584fd92f9933417d8c4.setContent(html_9291da90af7bef54b60d1bfddda13bcc);
+            
+        
+
+        marker_856c4a62d9b1c7ce4daf58d1490044e4.bindPopup(popup_7f44a570d0c66584fd92f9933417d8c4)
+        ;
+
+        
+    
+    
+                marker_856c4a62d9b1c7ce4daf58d1490044e4.setIcon(icon_83c2e75825038b684c404c33cf703cb6);
+            
+    
+            var marker_45ed0530d36fef43e1f99f14adf74e59 = L.marker(
+                [-3.73996838, -38.53237147],
+                {
+}
+            ).addTo(feature_group_940380fe910b7ec6433c31eabb9ad48a);
+        
+    
+            var icon_9b431c0d5a7617cd138c388c9a685eb2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_81f790c2d47724918f30f415543d71f4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_89cfa27d37b325b2bab599671527d21c = $(`<div id="html_89cfa27d37b325b2bab599671527d21c" style="width: 100.0%; height: 100.0%;">COMETA (BARAO DO RIO BRANCO)</div>`)[0];
+                popup_81f790c2d47724918f30f415543d71f4.setContent(html_89cfa27d37b325b2bab599671527d21c);
+            
+        
+
+        marker_45ed0530d36fef43e1f99f14adf74e59.bindPopup(popup_81f790c2d47724918f30f415543d71f4)
+        ;
+
+        
+    
+    
+                marker_45ed0530d36fef43e1f99f14adf74e59.setIcon(icon_9b431c0d5a7617cd138c388c9a685eb2);
+            
+    
+            var marker_40030faf73cbde2a5e4e8d091098a39e = L.marker(
+                [-3.737422, -38.5517313],
+                {
+}
+            ).addTo(feature_group_940380fe910b7ec6433c31eabb9ad48a);
+        
+    
+            var icon_cb9fd45f33764fa57659ec92bbaed111 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c1693c366ce42b368d8437f282a173e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_82942a68e9f7c0dcbd68af9098ba85cf = $(`<div id="html_82942a68e9f7c0dcbd68af9098ba85cf" style="width: 100.0%; height: 100.0%;">FRANGOLANDIA - PARQUE ARAXA</div>`)[0];
+                popup_c1693c366ce42b368d8437f282a173e4.setContent(html_82942a68e9f7c0dcbd68af9098ba85cf);
+            
+        
+
+        marker_40030faf73cbde2a5e4e8d091098a39e.bindPopup(popup_c1693c366ce42b368d8437f282a173e4)
+        ;
+
+        
+    
+    
+                marker_40030faf73cbde2a5e4e8d091098a39e.setIcon(icon_cb9fd45f33764fa57659ec92bbaed111);
+            
+    
+            var marker_aa99f8d69a3bc045b19e7359ef73b841 = L.marker(
+                [-3.7335995, -38.5586262],
+                {
+}
+            ).addTo(feature_group_940380fe910b7ec6433c31eabb9ad48a);
+        
+    
+            var icon_02c378ccc724833fff5c0a6619b3b786 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f60cfffa661d52b7084e88f33b594718 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0d39ee41f45977450a6003b23bc3005b = $(`<div id="html_0d39ee41f45977450a6003b23bc3005b" style="width: 100.0%; height: 100.0%;">PAO DE ACUCAR - BEZERRA DE MENEZES (2375)</div>`)[0];
+                popup_f60cfffa661d52b7084e88f33b594718.setContent(html_0d39ee41f45977450a6003b23bc3005b);
+            
+        
+
+        marker_aa99f8d69a3bc045b19e7359ef73b841.bindPopup(popup_f60cfffa661d52b7084e88f33b594718)
+        ;
+
+        
+    
+    
+                marker_aa99f8d69a3bc045b19e7359ef73b841.setIcon(icon_02c378ccc724833fff5c0a6619b3b786);
+            
+    
+            var marker_efdc42fa8d0610fd4e07ed04f96447b2 = L.marker(
+                [-3.7403104, -38.5603054],
+                {
+}
+            ).addTo(feature_group_940380fe910b7ec6433c31eabb9ad48a);
+        
+    
+            var icon_da04b43af5cb0eef0c8897405412b562 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9f3160b935420c296faabbe6e1c37ef9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_29a14748a560acaf9b7bcd5368dde1a3 = $(`<div id="html_29a14748a560acaf9b7bcd5368dde1a3" style="width: 100.0%; height: 100.0%;">COMETA (JOVITA FEITOSA)</div>`)[0];
+                popup_9f3160b935420c296faabbe6e1c37ef9.setContent(html_29a14748a560acaf9b7bcd5368dde1a3);
+            
+        
+
+        marker_efdc42fa8d0610fd4e07ed04f96447b2.bindPopup(popup_9f3160b935420c296faabbe6e1c37ef9)
+        ;
+
+        
+    
+    
+                marker_efdc42fa8d0610fd4e07ed04f96447b2.setIcon(icon_da04b43af5cb0eef0c8897405412b562);
+            
+    
+            var marker_70d662809a8dcbd085ebdf7777de6396 = L.marker(
+                [-3.7468473, -38.5559982],
+                {
+}
+            ).addTo(feature_group_940380fe910b7ec6433c31eabb9ad48a);
+        
+    
+            var icon_cbddcd086c8bcaeb1d8a9b61f830b461 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4e426fde6fdcdbaae90e9310eb589a63 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d5afe7bcdae172a64ca829c11bc5af21 = $(`<div id="html_d5afe7bcdae172a64ca829c11bc5af21" style="width: 100.0%; height: 100.0%;">SUPER LAGOA - RODOLFO TEOFILO</div>`)[0];
+                popup_4e426fde6fdcdbaae90e9310eb589a63.setContent(html_d5afe7bcdae172a64ca829c11bc5af21);
+            
+        
+
+        marker_70d662809a8dcbd085ebdf7777de6396.bindPopup(popup_4e426fde6fdcdbaae90e9310eb589a63)
+        ;
+
+        
+    
+    
+                marker_70d662809a8dcbd085ebdf7777de6396.setIcon(icon_cbddcd086c8bcaeb1d8a9b61f830b461);
+            
+    
+            var marker_7defda3f909d42947c80e08b86c9011c = L.marker(
+                [-3.725058699999991, -38.55094759999997],
+                {
+}
+            ).addTo(feature_group_940380fe910b7ec6433c31eabb9ad48a);
+        
+    
+            var icon_1c5cf60a326f2eada00d9b6ad023129e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1bb080f59f2818172333f062ccc47932 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_69136193ea4b0ab571ad213fbaa51b4c = $(`<div id="html_69136193ea4b0ab571ad213fbaa51b4c" style="width: 100.0%; height: 100.0%;">FRANGOLANDIA - MONTE CASTELO</div>`)[0];
+                popup_1bb080f59f2818172333f062ccc47932.setContent(html_69136193ea4b0ab571ad213fbaa51b4c);
+            
+        
+
+        marker_7defda3f909d42947c80e08b86c9011c.bindPopup(popup_1bb080f59f2818172333f062ccc47932)
+        ;
+
+        
+    
+    
+                marker_7defda3f909d42947c80e08b86c9011c.setIcon(icon_1c5cf60a326f2eada00d9b6ad023129e);
+            
+    
+            var marker_c489302ccf30baa964f08f0a80e0c482 = L.marker(
+                [-3.72013, -38.54911],
+                {
+}
+            ).addTo(feature_group_940380fe910b7ec6433c31eabb9ad48a);
+        
+    
+            var icon_56a3688e44628c7e7b16ef37c8b0e656 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_75ce1ff57e5cc5c05b85690c3604b438 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d439fa39be574cc5cfba9dcac74a7dcc = $(`<div id="html_d439fa39be574cc5cfba9dcac74a7dcc" style="width: 100.0%; height: 100.0%;">COMETA (JACARECANGA)</div>`)[0];
+                popup_75ce1ff57e5cc5c05b85690c3604b438.setContent(html_d439fa39be574cc5cfba9dcac74a7dcc);
+            
+        
+
+        marker_c489302ccf30baa964f08f0a80e0c482.bindPopup(popup_75ce1ff57e5cc5c05b85690c3604b438)
+        ;
+
+        
+    
+    
+                marker_c489302ccf30baa964f08f0a80e0c482.setIcon(icon_56a3688e44628c7e7b16ef37c8b0e656);
+            
+    
+            var marker_0a060b8b8d1b62539597d73efe8cd7d0 = L.marker(
+                [-3.7216531, -38.540229],
+                {
+}
+            ).addTo(feature_group_940380fe910b7ec6433c31eabb9ad48a);
+        
+    
+            var icon_746e4726988a489a3926e79f9aa266c5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ce9ee1147640db4952041b1018a7c46e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cbec2660027ed1be65300aca20d3e833 = $(`<div id="html_cbec2660027ed1be65300aca20d3e833" style="width: 100.0%; height: 100.0%;">COMETA (CENTRO)</div>`)[0];
+                popup_ce9ee1147640db4952041b1018a7c46e.setContent(html_cbec2660027ed1be65300aca20d3e833);
+            
+        
+
+        marker_0a060b8b8d1b62539597d73efe8cd7d0.bindPopup(popup_ce9ee1147640db4952041b1018a7c46e)
+        ;
+
+        
+    
+    
+                marker_0a060b8b8d1b62539597d73efe8cd7d0.setIcon(icon_746e4726988a489a3926e79f9aa266c5);
+            
+    
+            var marker_051f11579aa4147a4d1ff372fda1ea0d = L.marker(
+                [-3.714690899999965, -38.56453049999993],
+                {
+}
+            ).addTo(feature_group_940380fe910b7ec6433c31eabb9ad48a);
+        
+    
+            var icon_33d9838444d68701d61de2923644cc59 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e94185a6ecc7a16d7d91ed9a4a5f6aaf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ee7c0a36ac031bf88f3617cd668715cc = $(`<div id="html_ee7c0a36ac031bf88f3617cd668715cc" style="width: 100.0%; height: 100.0%;">FRANGOLANDIA - ALVARO WEYNE</div>`)[0];
+                popup_e94185a6ecc7a16d7d91ed9a4a5f6aaf.setContent(html_ee7c0a36ac031bf88f3617cd668715cc);
+            
+        
+
+        marker_051f11579aa4147a4d1ff372fda1ea0d.bindPopup(popup_e94185a6ecc7a16d7d91ed9a4a5f6aaf)
+        ;
+
+        
+    
+    
+                marker_051f11579aa4147a4d1ff372fda1ea0d.setIcon(icon_33d9838444d68701d61de2923644cc59);
+            
+    
+            var marker_3cfca2eb7cf426703f8dda8ea9d962f3 = L.marker(
+                [-3.7049139, -38.5780082],
+                {
+}
+            ).addTo(feature_group_940380fe910b7ec6433c31eabb9ad48a);
+        
+    
+            var icon_f61e89b7254beae3a9c2eb990b263286 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_caa0a53a099b80e12322cc10ab23cdd1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f6368224dafa326ab5ae5edd05b8a209 = $(`<div id="html_f6368224dafa326ab5ae5edd05b8a209" style="width: 100.0%; height: 100.0%;">COMETA (CASTELO BRANCO)</div>`)[0];
+                popup_caa0a53a099b80e12322cc10ab23cdd1.setContent(html_f6368224dafa326ab5ae5edd05b8a209);
+            
+        
+
+        marker_3cfca2eb7cf426703f8dda8ea9d962f3.bindPopup(popup_caa0a53a099b80e12322cc10ab23cdd1)
+        ;
+
+        
+    
+    
+                marker_3cfca2eb7cf426703f8dda8ea9d962f3.setIcon(icon_f61e89b7254beae3a9c2eb990b263286);
+            
+    
+            var marker_ceb8747fcb67fc9ff128cb41b2a3baf8 = L.marker(
+                [-3.7044151, -38.5783717],
+                {
+}
+            ).addTo(feature_group_940380fe910b7ec6433c31eabb9ad48a);
+        
+    
+            var icon_382058939878ac461e7a56ed435dc71f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ab821af55bc8350d3aa62d5510267c33 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_df1588494d9636ebf5580d7ab94da130 = $(`<div id="html_df1588494d9636ebf5580d7ab94da130" style="width: 100.0%; height: 100.0%;">LAG - BARRA DO CEARA</div>`)[0];
+                popup_ab821af55bc8350d3aa62d5510267c33.setContent(html_df1588494d9636ebf5580d7ab94da130);
+            
+        
+
+        marker_ceb8747fcb67fc9ff128cb41b2a3baf8.bindPopup(popup_ab821af55bc8350d3aa62d5510267c33)
+        ;
+
+        
+    
+    
+                marker_ceb8747fcb67fc9ff128cb41b2a3baf8.setIcon(icon_382058939878ac461e7a56ed435dc71f);
+            
+    
+            var poly_line_b96dbc9f295b20b75033530229e9373d = L.polyline(
+                [[-3.746476, -38.5313805], [-3.73996838, -38.53237147], [-3.737422, -38.5517313], [-3.7335995, -38.5586262], [-3.7403104, -38.5603054], [-3.7468473, -38.5559982], [-3.725058699999991, -38.55094759999997], [-3.72013, -38.54911], [-3.7216531, -38.540229], [-3.714690899999965, -38.56453049999993], [-3.7049139, -38.5780082], [-3.7044151, -38.5783717]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_940380fe910b7ec6433c31eabb9ad48a);
+        
+    
+            feature_group_940380fe910b7ec6433c31eabb9ad48a.addTo(map_d683966226d3ad3ecb00d5a373f77802);
+        
+    
+            var feature_group_c75987fa0793a916646ba40cd315eafa = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_f6b461eef8bf4b23ea79c0162fea073d = L.marker(
+                [-3.7302312, -38.568373],
+                {
+}
+            ).addTo(feature_group_c75987fa0793a916646ba40cd315eafa);
+        
+    
+            var icon_5452a198a4e69ef4cd4d75797cf0dac2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7467343fbfa3ae76e7dc60b2465b0afc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ad7ca4470e2ece613ee5253ea871b212 = $(`<div id="html_ad7ca4470e2ece613ee5253ea871b212" style="width: 100.0%; height: 100.0%;">COMETA (PRESIDENTE KENNEDY)</div>`)[0];
+                popup_7467343fbfa3ae76e7dc60b2465b0afc.setContent(html_ad7ca4470e2ece613ee5253ea871b212);
+            
+        
+
+        marker_f6b461eef8bf4b23ea79c0162fea073d.bindPopup(popup_7467343fbfa3ae76e7dc60b2465b0afc)
+        ;
+
+        
+    
+    
+                marker_f6b461eef8bf4b23ea79c0162fea073d.setIcon(icon_5452a198a4e69ef4cd4d75797cf0dac2);
+            
+    
+            var marker_53520765e77371015c1bd867a112090a = L.marker(
+                [-3.7352505, -38.5662836],
+                {
+}
+            ).addTo(feature_group_c75987fa0793a916646ba40cd315eafa);
+        
+    
+            var icon_7994e18f90a2daed6a5ab329a9cd23c8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d71c9bf5d40757440a1410e4780b5c06 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_31c4cc410320cb1177de40b474cfcc82 = $(`<div id="html_31c4cc410320cb1177de40b474cfcc82" style="width: 100.0%; height: 100.0%;">SUPER LAGOA - NORTH SHOPPING</div>`)[0];
+                popup_d71c9bf5d40757440a1410e4780b5c06.setContent(html_31c4cc410320cb1177de40b474cfcc82);
+            
+        
+
+        marker_53520765e77371015c1bd867a112090a.bindPopup(popup_d71c9bf5d40757440a1410e4780b5c06)
+        ;
+
+        
+    
+    
+                marker_53520765e77371015c1bd867a112090a.setIcon(icon_7994e18f90a2daed6a5ab329a9cd23c8);
+            
+    
+            var marker_708f9d2c52b3e5dbcdb859b682a4822c = L.marker(
+                [-3.7429477, -38.5599157],
+                {
+}
+            ).addTo(feature_group_c75987fa0793a916646ba40cd315eafa);
+        
+    
+            var icon_ae98d67a91e9a3dc0c73603ae029179a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0f086e1e059f8d6ad2ad4cff03abb02b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9b7630508d808023846044e701202d13 = $(`<div id="html_9b7630508d808023846044e701202d13" style="width: 100.0%; height: 100.0%;">CENTERBOX - PARQUELANDIA</div>`)[0];
+                popup_0f086e1e059f8d6ad2ad4cff03abb02b.setContent(html_9b7630508d808023846044e701202d13);
+            
+        
+
+        marker_708f9d2c52b3e5dbcdb859b682a4822c.bindPopup(popup_0f086e1e059f8d6ad2ad4cff03abb02b)
+        ;
+
+        
+    
+    
+                marker_708f9d2c52b3e5dbcdb859b682a4822c.setIcon(icon_ae98d67a91e9a3dc0c73603ae029179a);
+            
+    
+            var marker_46bbee91a3145f3f1d0c85cf332e09aa = L.marker(
+                [-3.7548351, -38.5561623],
+                {
+}
+            ).addTo(feature_group_c75987fa0793a916646ba40cd315eafa);
+        
+    
+            var icon_de55f99c4b6ef8f3407f80b697392de4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5b9176732d25b91eb2d21315c7fa26bf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d46b2e1c4a187ae1fd10033abd656df7 = $(`<div id="html_d46b2e1c4a187ae1fd10033abd656df7" style="width: 100.0%; height: 100.0%;">CENTERBOX - PANAMERICANO</div>`)[0];
+                popup_5b9176732d25b91eb2d21315c7fa26bf.setContent(html_d46b2e1c4a187ae1fd10033abd656df7);
+            
+        
+
+        marker_46bbee91a3145f3f1d0c85cf332e09aa.bindPopup(popup_5b9176732d25b91eb2d21315c7fa26bf)
+        ;
+
+        
+    
+    
+                marker_46bbee91a3145f3f1d0c85cf332e09aa.setIcon(icon_de55f99c4b6ef8f3407f80b697392de4);
+            
+    
+            var marker_0d638842724d4cb0fdb64a51bf65ee51 = L.marker(
+                [-3.7570117, -38.5530651],
+                {
+}
+            ).addTo(feature_group_c75987fa0793a916646ba40cd315eafa);
+        
+    
+            var icon_16ba6144fb55d37c6ecff6e2c9d332a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f7fd18d063763ed70cda66a4696cbb4b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_40785b2a1cf1a051cfaf8609c1a2fba5 = $(`<div id="html_40785b2a1cf1a051cfaf8609c1a2fba5" style="width: 100.0%; height: 100.0%;">COMETA (JOAO PESSOA)</div>`)[0];
+                popup_f7fd18d063763ed70cda66a4696cbb4b.setContent(html_40785b2a1cf1a051cfaf8609c1a2fba5);
+            
+        
+
+        marker_0d638842724d4cb0fdb64a51bf65ee51.bindPopup(popup_f7fd18d063763ed70cda66a4696cbb4b)
+        ;
+
+        
+    
+    
+                marker_0d638842724d4cb0fdb64a51bf65ee51.setIcon(icon_16ba6144fb55d37c6ecff6e2c9d332a2);
+            
+    
+            var marker_6250a110b567546917964abdd044b74f = L.marker(
+                [-3.7550758, -38.5691635],
+                {
+}
+            ).addTo(feature_group_c75987fa0793a916646ba40cd315eafa);
+        
+    
+            var icon_530b9240cea530be38f4e5063126a113 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2db6dd7b6ed619f4b6e1fd7631f44ec6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af8096d789bd0355449c987d4ec11a11 = $(`<div id="html_af8096d789bd0355449c987d4ec11a11" style="width: 100.0%; height: 100.0%;">PINHEIRO - PANAMERICANO</div>`)[0];
+                popup_2db6dd7b6ed619f4b6e1fd7631f44ec6.setContent(html_af8096d789bd0355449c987d4ec11a11);
+            
+        
+
+        marker_6250a110b567546917964abdd044b74f.bindPopup(popup_2db6dd7b6ed619f4b6e1fd7631f44ec6)
+        ;
+
+        
+    
+    
+                marker_6250a110b567546917964abdd044b74f.setIcon(icon_530b9240cea530be38f4e5063126a113);
+            
+    
+            var marker_e28089763ea37a4c48dee8fa8bb57a16 = L.marker(
+                [-3.7498338, -38.5846885],
+                {
+}
+            ).addTo(feature_group_c75987fa0793a916646ba40cd315eafa);
+        
+    
+            var icon_765b0429b75b3a97bc09a87e85a06df5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_29d07b0c25b9133f5377457b23cdef4b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1d7f3ed666edc6e196c13ae6fd7d760e = $(`<div id="html_1d7f3ed666edc6e196c13ae6fd7d760e" style="width: 100.0%; height: 100.0%;">COMETA (MATOS DOURADO)</div>`)[0];
+                popup_29d07b0c25b9133f5377457b23cdef4b.setContent(html_1d7f3ed666edc6e196c13ae6fd7d760e);
+            
+        
+
+        marker_e28089763ea37a4c48dee8fa8bb57a16.bindPopup(popup_29d07b0c25b9133f5377457b23cdef4b)
+        ;
+
+        
+    
+    
+                marker_e28089763ea37a4c48dee8fa8bb57a16.setIcon(icon_765b0429b75b3a97bc09a87e85a06df5);
+            
+    
+            var marker_5674a2904c7d88b0bafcf27303f498c3 = L.marker(
+                [-3.7233183, -38.5963513],
+                {
+}
+            ).addTo(feature_group_c75987fa0793a916646ba40cd315eafa);
+        
+    
+            var icon_493bab0ae58abf14d65f794632cc54ea = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6f1b4f3824e3ca93bc476cff219ca64e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a08b017234f4ec159f025fcff191197d = $(`<div id="html_a08b017234f4ec159f025fcff191197d" style="width: 100.0%; height: 100.0%;">COMETA (VILA VELHA)</div>`)[0];
+                popup_6f1b4f3824e3ca93bc476cff219ca64e.setContent(html_a08b017234f4ec159f025fcff191197d);
+            
+        
+
+        marker_5674a2904c7d88b0bafcf27303f498c3.bindPopup(popup_6f1b4f3824e3ca93bc476cff219ca64e)
+        ;
+
+        
+    
+    
+                marker_5674a2904c7d88b0bafcf27303f498c3.setIcon(icon_493bab0ae58abf14d65f794632cc54ea);
+            
+    
+            var marker_eb287bff622e5ea7f3c342c94f381bfc = L.marker(
+                [-3.7184314, -38.5959119],
+                {
+}
+            ).addTo(feature_group_c75987fa0793a916646ba40cd315eafa);
+        
+    
+            var icon_e72a7411ee35153f43268ef3cb33b14c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_29b5c6d2736f24758c58a63ffc53f1f7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bd1bce7530680bcda7045165b93d1a4d = $(`<div id="html_bd1bce7530680bcda7045165b93d1a4d" style="width: 100.0%; height: 100.0%;">SUPER LAGOA - MOZART LUCENA</div>`)[0];
+                popup_29b5c6d2736f24758c58a63ffc53f1f7.setContent(html_bd1bce7530680bcda7045165b93d1a4d);
+            
+        
+
+        marker_eb287bff622e5ea7f3c342c94f381bfc.bindPopup(popup_29b5c6d2736f24758c58a63ffc53f1f7)
+        ;
+
+        
+    
+    
+                marker_eb287bff622e5ea7f3c342c94f381bfc.setIcon(icon_e72a7411ee35153f43268ef3cb33b14c);
+            
+    
+            var marker_422f642fa37686f5c00caa619695fe73 = L.marker(
+                [-3.7135362, -38.5885703],
+                {
+}
+            ).addTo(feature_group_c75987fa0793a916646ba40cd315eafa);
+        
+    
+            var icon_c15d96989b77ce9a645ace2cd4a47aba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_12d9b65580ba8715889682679ebea284 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7fa62cd715301e76104b2b17cbeff767 = $(`<div id="html_7fa62cd715301e76104b2b17cbeff767" style="width: 100.0%; height: 100.0%;">CENTERBOX - CEL CARVALHO</div>`)[0];
+                popup_12d9b65580ba8715889682679ebea284.setContent(html_7fa62cd715301e76104b2b17cbeff767);
+            
+        
+
+        marker_422f642fa37686f5c00caa619695fe73.bindPopup(popup_12d9b65580ba8715889682679ebea284)
+        ;
+
+        
+    
+    
+                marker_422f642fa37686f5c00caa619695fe73.setIcon(icon_c15d96989b77ce9a645ace2cd4a47aba);
+            
+    
+            var marker_8e582f06e2d36950d096b4e2aa386bf2 = L.marker(
+                [-3.7100856, -38.5897058],
+                {
+}
+            ).addTo(feature_group_c75987fa0793a916646ba40cd315eafa);
+        
+    
+            var icon_7af5c84c07630f183f402a33c3ddd06c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_775f3a1d98ba6160a330d0b62f1fe000 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bb92f3570eeb9d1cc05ae499b3192e54 = $(`<div id="html_bb92f3570eeb9d1cc05ae499b3192e54" style="width: 100.0%; height: 100.0%;">CENTERBOX - BARRA</div>`)[0];
+                popup_775f3a1d98ba6160a330d0b62f1fe000.setContent(html_bb92f3570eeb9d1cc05ae499b3192e54);
+            
+        
+
+        marker_8e582f06e2d36950d096b4e2aa386bf2.bindPopup(popup_775f3a1d98ba6160a330d0b62f1fe000)
+        ;
+
+        
+    
+    
+                marker_8e582f06e2d36950d096b4e2aa386bf2.setIcon(icon_7af5c84c07630f183f402a33c3ddd06c);
+            
+    
+            var marker_3408a7927861fcef94dc9bccc3216935 = L.marker(
+                [-3.71767679, -38.57899347],
+                {
+}
+            ).addTo(feature_group_c75987fa0793a916646ba40cd315eafa);
+        
+    
+            var icon_d75b0007289f20a8add11d40d506300d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7a7c28447ea6a747720621276df0c57c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d3ce11080589dc1ed4d2f8e18d177a4e = $(`<div id="html_d3ce11080589dc1ed4d2f8e18d177a4e" style="width: 100.0%; height: 100.0%;">CENTERBOX - JD IRACEMA</div>`)[0];
+                popup_7a7c28447ea6a747720621276df0c57c.setContent(html_d3ce11080589dc1ed4d2f8e18d177a4e);
+            
+        
+
+        marker_3408a7927861fcef94dc9bccc3216935.bindPopup(popup_7a7c28447ea6a747720621276df0c57c)
+        ;
+
+        
+    
+    
+                marker_3408a7927861fcef94dc9bccc3216935.setIcon(icon_d75b0007289f20a8add11d40d506300d);
+            
+    
+            var poly_line_22cf92313d2558d93e68e9062918a3f6 = L.polyline(
+                [[-3.7302312, -38.568373], [-3.7352505, -38.5662836], [-3.7429477, -38.5599157], [-3.7548351, -38.5561623], [-3.7570117, -38.5530651], [-3.7550758, -38.5691635], [-3.7498338, -38.5846885], [-3.7233183, -38.5963513], [-3.7184314, -38.5959119], [-3.7135362, -38.5885703], [-3.7100856, -38.5897058], [-3.71767679, -38.57899347]],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkgreen", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c75987fa0793a916646ba40cd315eafa);
+        
+    
+            feature_group_c75987fa0793a916646ba40cd315eafa.addTo(map_d683966226d3ad3ecb00d5a373f77802);
+        
+    
+            var feature_group_fa24636e77784ab7d008add179b90082 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_01b62fe7ce56de2e9bb840b418c10b54 = L.marker(
+                [-3.7687918, -38.5566308],
+                {
+}
+            ).addTo(feature_group_fa24636e77784ab7d008add179b90082);
+        
+    
+            var icon_a064dcaa855f9874e25e8b22cac31ad6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6aa81dd7ccc714f4bbdd71f1725ab6fe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2a7f1af8a6a70bdcd1a36d82f2d8f646 = $(`<div id="html_2a7f1af8a6a70bdcd1a36d82f2d8f646" style="width: 100.0%; height: 100.0%;">FRANGOLANDIA - MONTESE</div>`)[0];
+                popup_6aa81dd7ccc714f4bbdd71f1725ab6fe.setContent(html_2a7f1af8a6a70bdcd1a36d82f2d8f646);
+            
+        
+
+        marker_01b62fe7ce56de2e9bb840b418c10b54.bindPopup(popup_6aa81dd7ccc714f4bbdd71f1725ab6fe)
+        ;
+
+        
+    
+    
+                marker_01b62fe7ce56de2e9bb840b418c10b54.setIcon(icon_a064dcaa855f9874e25e8b22cac31ad6);
+            
+    
+            var marker_00c312b98e24126363c7d6c109f41211 = L.marker(
+                [-3.77391301, -38.56794475],
+                {
+}
+            ).addTo(feature_group_fa24636e77784ab7d008add179b90082);
+        
+    
+            var icon_6868fd09ade5634b600229fa8e1c38f9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0666fa862f6bb45c49a3a4def76ba79e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cbfe39ce146f415347f8567cc108cb93 = $(`<div id="html_cbfe39ce146f415347f8567cc108cb93" style="width: 100.0%; height: 100.0%;">SUPER LAGOA - PARANGABA</div>`)[0];
+                popup_0666fa862f6bb45c49a3a4def76ba79e.setContent(html_cbfe39ce146f415347f8567cc108cb93);
+            
+        
+
+        marker_00c312b98e24126363c7d6c109f41211.bindPopup(popup_0666fa862f6bb45c49a3a4def76ba79e)
+        ;
+
+        
+    
+    
+                marker_00c312b98e24126363c7d6c109f41211.setIcon(icon_6868fd09ade5634b600229fa8e1c38f9);
+            
+    
+            var marker_d63e25b80b346ea1b369b16c201471a6 = L.marker(
+                [-3.77305558, -38.57358276],
+                {
+}
+            ).addTo(feature_group_fa24636e77784ab7d008add179b90082);
+        
+    
+            var icon_2ba70c31cd6efc9755773a4d73e495a6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_72ea5fccf888e1ed7ca619210c9ec69d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_404c7fe6d52eeabab4b2d750be63bb9b = $(`<div id="html_404c7fe6d52eeabab4b2d750be63bb9b" style="width: 100.0%; height: 100.0%;">COMETA (JOAO XXIII)</div>`)[0];
+                popup_72ea5fccf888e1ed7ca619210c9ec69d.setContent(html_404c7fe6d52eeabab4b2d750be63bb9b);
+            
+        
+
+        marker_d63e25b80b346ea1b369b16c201471a6.bindPopup(popup_72ea5fccf888e1ed7ca619210c9ec69d)
+        ;
+
+        
+    
+    
+                marker_d63e25b80b346ea1b369b16c201471a6.setIcon(icon_2ba70c31cd6efc9755773a4d73e495a6);
+            
+    
+            var marker_677acd66e7a10ef5ff43fd501abf9c7f = L.marker(
+                [-3.77289, -38.5882422],
+                {
+}
+            ).addTo(feature_group_fa24636e77784ab7d008add179b90082);
+        
+    
+            var icon_e9846bb37cc5b280691ebbafe0b5ad1d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cb56152401783ccfcf9590af4807d124 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_09a2ef587daa8de0d3190e0121ce58a9 = $(`<div id="html_09a2ef587daa8de0d3190e0121ce58a9" style="width: 100.0%; height: 100.0%;">CENTERBOX - JOAO XXIII</div>`)[0];
+                popup_cb56152401783ccfcf9590af4807d124.setContent(html_09a2ef587daa8de0d3190e0121ce58a9);
+            
+        
+
+        marker_677acd66e7a10ef5ff43fd501abf9c7f.bindPopup(popup_cb56152401783ccfcf9590af4807d124)
+        ;
+
+        
+    
+    
+                marker_677acd66e7a10ef5ff43fd501abf9c7f.setIcon(icon_e9846bb37cc5b280691ebbafe0b5ad1d);
+            
+    
+            var marker_4f01a414514a62ed623ee00d1234dc61 = L.marker(
+                [-3.7598094, -38.5861946],
+                {
+}
+            ).addTo(feature_group_fa24636e77784ab7d008add179b90082);
+        
+    
+            var icon_d782c982494a89e1d10538d266dd7d99 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e4fbd13dfc9acdd0777be87287298f8c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c7b03c3ffe2f43aea331122eade2e4f0 = $(`<div id="html_c7b03c3ffe2f43aea331122eade2e4f0" style="width: 100.0%; height: 100.0%;">COMETA (HENRIQUE JORGE)</div>`)[0];
+                popup_e4fbd13dfc9acdd0777be87287298f8c.setContent(html_c7b03c3ffe2f43aea331122eade2e4f0);
+            
+        
+
+        marker_4f01a414514a62ed623ee00d1234dc61.bindPopup(popup_e4fbd13dfc9acdd0777be87287298f8c)
+        ;
+
+        
+    
+    
+                marker_4f01a414514a62ed623ee00d1234dc61.setIcon(icon_d782c982494a89e1d10538d266dd7d99);
+            
+    
+            var marker_acef1eb0ab768697541d6f7203bdd15b = L.marker(
+                [-3.7580958, -38.5843396],
+                {
+}
+            ).addTo(feature_group_fa24636e77784ab7d008add179b90082);
+        
+    
+            var icon_991245edbc1714799e7fd20ec8fdc0a4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_986f18aa5c0b7bf28d6d8ce970be8917 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_75dbad7216a997ef1f75b03e424de2b8 = $(`<div id="html_75dbad7216a997ef1f75b03e424de2b8" style="width: 100.0%; height: 100.0%;">SUPER DO POVO - HENRIQUE JORGE</div>`)[0];
+                popup_986f18aa5c0b7bf28d6d8ce970be8917.setContent(html_75dbad7216a997ef1f75b03e424de2b8);
+            
+        
+
+        marker_acef1eb0ab768697541d6f7203bdd15b.bindPopup(popup_986f18aa5c0b7bf28d6d8ce970be8917)
+        ;
+
+        
+    
+    
+                marker_acef1eb0ab768697541d6f7203bdd15b.setIcon(icon_991245edbc1714799e7fd20ec8fdc0a4);
+            
+    
+            var marker_5a7e5e475c647350240d89034c23eeac = L.marker(
+                [-3.75714249, -38.59061584],
+                {
+}
+            ).addTo(feature_group_fa24636e77784ab7d008add179b90082);
+        
+    
+            var icon_9eda72411a11144e1226c0aefff1ef5c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_34154db1d9e97f14db23171bf550ba49 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_736c1c3ee53c36cef6b56d485cb8183a = $(`<div id="html_736c1c3ee53c36cef6b56d485cb8183a" style="width: 100.0%; height: 100.0%;">MATEUS - HENRIQUE JORGE</div>`)[0];
+                popup_34154db1d9e97f14db23171bf550ba49.setContent(html_736c1c3ee53c36cef6b56d485cb8183a);
+            
+        
+
+        marker_5a7e5e475c647350240d89034c23eeac.bindPopup(popup_34154db1d9e97f14db23171bf550ba49)
+        ;
+
+        
+    
+    
+                marker_5a7e5e475c647350240d89034c23eeac.setIcon(icon_9eda72411a11144e1226c0aefff1ef5c);
+            
+    
+            var marker_15bc2dfe532377b51cd84dc61ff76dbb = L.marker(
+                [-3.7566112, -38.6024185],
+                {
+}
+            ).addTo(feature_group_fa24636e77784ab7d008add179b90082);
+        
+    
+            var icon_cde14676abe586f7c0ec0db8bfc341d7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_12d635a55214576b21e3861e5967a983 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b7faa6ec255dd9fdb7c4a6c578aee594 = $(`<div id="html_b7faa6ec255dd9fdb7c4a6c578aee594" style="width: 100.0%; height: 100.0%;">CENTERBOX - PRQ GENIBAU</div>`)[0];
+                popup_12d635a55214576b21e3861e5967a983.setContent(html_b7faa6ec255dd9fdb7c4a6c578aee594);
+            
+        
+
+        marker_15bc2dfe532377b51cd84dc61ff76dbb.bindPopup(popup_12d635a55214576b21e3861e5967a983)
+        ;
+
+        
+    
+    
+                marker_15bc2dfe532377b51cd84dc61ff76dbb.setIcon(icon_cde14676abe586f7c0ec0db8bfc341d7);
+            
+    
+            var marker_f2fe374b93efe619ab488b8784752f9a = L.marker(
+                [-3.7694439, -38.6045471],
+                {
+}
+            ).addTo(feature_group_fa24636e77784ab7d008add179b90082);
+        
+    
+            var icon_943dad02d3293c882baf0397ed5dfb03 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_01fde7b0ef9b89d66bedcbb21c9926e8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4fa4fbd0859ec2b46866d2c327ea74ab = $(`<div id="html_4fa4fbd0859ec2b46866d2c327ea74ab" style="width: 100.0%; height: 100.0%;">SUPER DO POVO - CONJUNTO CEARA</div>`)[0];
+                popup_01fde7b0ef9b89d66bedcbb21c9926e8.setContent(html_4fa4fbd0859ec2b46866d2c327ea74ab);
+            
+        
+
+        marker_f2fe374b93efe619ab488b8784752f9a.bindPopup(popup_01fde7b0ef9b89d66bedcbb21c9926e8)
+        ;
+
+        
+    
+    
+                marker_f2fe374b93efe619ab488b8784752f9a.setIcon(icon_943dad02d3293c882baf0397ed5dfb03);
+            
+    
+            var marker_5b239e43760e2334411ccd68071c04f4 = L.marker(
+                [-3.76132708, -38.61643438],
+                {
+}
+            ).addTo(feature_group_fa24636e77784ab7d008add179b90082);
+        
+    
+            var icon_646d52f90a3181ba3e6c0b8b350700ae = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e3be03c36a91babc6a4090f61e852627 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2bad73139c5072daaceaa1bb441ca8f8 = $(`<div id="html_2bad73139c5072daaceaa1bb441ca8f8" style="width: 100.0%; height: 100.0%;">MATEUS - CAUCAIA</div>`)[0];
+                popup_e3be03c36a91babc6a4090f61e852627.setContent(html_2bad73139c5072daaceaa1bb441ca8f8);
+            
+        
+
+        marker_5b239e43760e2334411ccd68071c04f4.bindPopup(popup_e3be03c36a91babc6a4090f61e852627)
+        ;
+
+        
+    
+    
+                marker_5b239e43760e2334411ccd68071c04f4.setIcon(icon_646d52f90a3181ba3e6c0b8b350700ae);
+            
+    
+            var marker_e7194303e066a90735d6077f91235984 = L.marker(
+                [-3.7738473, -38.6282389],
+                {
+}
+            ).addTo(feature_group_fa24636e77784ab7d008add179b90082);
+        
+    
+            var icon_06ebbbe15d41a19ae4f35705043b6cef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2da4249e765676b68ad101fa9fe156fe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8fe6de5fae157a1bfa41d05985d93664 = $(`<div id="html_8fe6de5fae157a1bfa41d05985d93664" style="width: 100.0%; height: 100.0%;">SUPER DO POVO - JUREMA</div>`)[0];
+                popup_2da4249e765676b68ad101fa9fe156fe.setContent(html_8fe6de5fae157a1bfa41d05985d93664);
+            
+        
+
+        marker_e7194303e066a90735d6077f91235984.bindPopup(popup_2da4249e765676b68ad101fa9fe156fe)
+        ;
+
+        
+    
+    
+                marker_e7194303e066a90735d6077f91235984.setIcon(icon_06ebbbe15d41a19ae4f35705043b6cef);
+            
+    
+            var marker_2289fd6480e45885807ce0ab18ea0e05 = L.marker(
+                [-3.7347353, -38.6595839],
+                {
+}
+            ).addTo(feature_group_fa24636e77784ab7d008add179b90082);
+        
+    
+            var icon_54382b12943b8ee5ea5f2621597b18e5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8d1b59f8cd971e757036dbca863de661 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b06c851ce5a154c133e68c4630657ff = $(`<div id="html_2b06c851ce5a154c133e68c4630657ff" style="width: 100.0%; height: 100.0%;">CENTERBOX - CAUCAIA</div>`)[0];
+                popup_8d1b59f8cd971e757036dbca863de661.setContent(html_2b06c851ce5a154c133e68c4630657ff);
+            
+        
+
+        marker_2289fd6480e45885807ce0ab18ea0e05.bindPopup(popup_8d1b59f8cd971e757036dbca863de661)
+        ;
+
+        
+    
+    
+                marker_2289fd6480e45885807ce0ab18ea0e05.setIcon(icon_54382b12943b8ee5ea5f2621597b18e5);
+            
+    
+            var poly_line_c6cc596ef935ad050ed2adf23bcdf25c = L.polyline(
+                [[-3.7687918, -38.5566308], [-3.77391301, -38.56794475], [-3.77305558, -38.57358276], [-3.77289, -38.5882422], [-3.7598094, -38.5861946], [-3.7580958, -38.5843396], [-3.75714249, -38.59061584], [-3.7566112, -38.6024185], [-3.7694439, -38.6045471], [-3.76132708, -38.61643438], [-3.7738473, -38.6282389], [-3.7347353, -38.6595839]],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cadetblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_fa24636e77784ab7d008add179b90082);
+        
+    
+            feature_group_fa24636e77784ab7d008add179b90082.addTo(map_d683966226d3ad3ecb00d5a373f77802);
+        
+    
+            var layer_control_a09d6e96073f6aeeeb834994e013e227_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_a7200a3b0ce2df18d59a956443f5981a,
+                },
+                overlays :  {
+                    "Rota 1" : feature_group_4ba38bd3c8975d3e49c758bbf6d2cc8e,
+                    "Rota 2" : feature_group_f209bfeb8e492b505f1384ac72c0a325,
+                    "Rota 3" : feature_group_e6db564b4e69dc73f1e5a238d5cca456,
+                    "Rota 4" : feature_group_b3fdab8b99d24324f670d8ad4003d786,
+                    "Rota 5" : feature_group_a51a3c4651893a66452d428b92251f34,
+                    "Rota 6" : feature_group_e97eacb4425f42adb74468e4f5742a4a,
+                    "Rota 7" : feature_group_2ebe0fa69afb12369a471f09e3ab372d,
+                    "Rota 8" : feature_group_cc54868988bc2b59136da3a955e54e29,
+                    "Rota 9" : feature_group_940380fe910b7ec6433c31eabb9ad48a,
+                    "Rota 10" : feature_group_c75987fa0793a916646ba40cd315eafa,
+                    "Rota 11" : feature_group_fa24636e77784ab7d008add179b90082,
+                },
+            };
+            let layer_control_a09d6e96073f6aeeeb834994e013e227 = L.control.layers(
+                layer_control_a09d6e96073f6aeeeb834994e013e227_layers.base_layers,
+                layer_control_a09d6e96073f6aeeeb834994e013e227_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_d683966226d3ad3ecb00d5a373f77802);
+
+        
+</script>
+</html>
