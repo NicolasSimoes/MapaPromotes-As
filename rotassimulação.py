@@ -1,119 +1,114 @@
 import pandas as pd
-import math
+import numpy as np
+from sklearn.cluster import MiniBatchKMeans
+from scipy.spatial.distance import cdist
 import folium
-from math import radians, sin, cos, atan2, sqrt
-from branca.element import Template, MacroElement
+import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
+from tqdm import tqdm
 
-# Parâmetros
-MIN_PER_ROUTE = 6
-MAX_PER_ROUTE = 12
+# ↓↓↓ Ajuste aqui seus parâmetros ↓↓↓
+MIN_SIZE       = 8        # mínimo de lojas por cluster
+MAX_SIZE       = 12       # máximo de lojas por cluster
+BATCH_SIZE     = 100      # para MiniBatchKMeans
+MAX_ITER_KMEAN = 100      # iterações do MiniBatchKMeans
+MAX_REBALANCE  = 50       # iterações máximas de rebalanceamento
+RANDOM_SEED    = 42
+# ↑↑↑ fim dos parâmetros ↑↑↑
 
-# 1) Carrega e padroniza colunas
-df = pd.read_csv("rotas.csv", sep=";", encoding="utf-8-sig")
-df = df.rename(columns={"LOJA": "LOJA", "LOGITUDE": "LONGITUDE"})
-df = df.dropna(subset=["LOJA", "LATITUDE", "LONGITUDE"]).reset_index(drop=True)
-df["LATITUDE"] = df["LATITUDE"].astype(str).str.replace(",", ".").astype(float)
-df["LONGITUDE"] = df["LONGITUDE"].astype(str).str.replace(",", ".").astype(float)
+# 1) Lê dados
+df = pd.read_csv('rotas.csv', sep=';')
+df.columns = df.columns.str.strip()
+coords = df[['LATITUDE','LONGITUDE']].to_numpy()
+N = coords.shape[0]
 
-coords = list(zip(df["LATITUDE"], df["LONGITUDE"]))
-N = len(coords)
-if N < MIN_PER_ROUTE:
-    raise ValueError(f"São apenas {N} LOJA; mínimo por rota é {MIN_PER_ROUTE}.")
+# 2) Define número de clusters inicial
+avg_size   = (MIN_SIZE + MAX_SIZE) / 2
+n_clusters = int(round(N / avg_size))
 
-def haversine(a, b):
-    R = 6371
-    lat1, lon1 = radians(a[0]), radians(a[1])
-    lat2, lon2 = radians(b[0]), radians(b[1])
-    dlat, dlon = lat2-lat1, lon2-lon1
-    h = sin(dlat/2)**2 + cos(lat1)*cos(lat2)*sin(dlon/2)**2
-    return R * 2 * atan2(sqrt(h), sqrt(1-h))
+# 3) Roda MiniBatchKMeans
+mbk = MiniBatchKMeans(
+    n_clusters=n_clusters,
+    batch_size=BATCH_SIZE,
+    max_iter=MAX_ITER_KMEAN,
+    n_init=1,
+    random_state=RANDOM_SEED
+)
+labels    = mbk.fit_predict(coords)
+centroids = mbk.cluster_centers_.copy()
 
-# 2) Define quantas rotas (k) e quantos pontos em cada
-k = math.ceil(N / MAX_PER_ROUTE)
-if not (k*MIN_PER_ROUTE <= N <= k*MAX_PER_ROUTE):
-    raise ValueError("Não é possível particionar dentro dos limites dados.")
+# 4) Rebalanceamento (com barra de progresso)
+for it in tqdm(range(1, MAX_REBALANCE+1), desc='Rebalanceando clusters'):
+    sizes = np.bincount(labels, minlength=n_clusters)
+    small = np.where((sizes>0)&(sizes<MIN_SIZE))[0]
+    large = np.where(sizes>MAX_SIZE)[0]
 
-sizes = [MIN_PER_ROUTE]*k
-resto = N - MIN_PER_ROUTE*k
-for i in range(k):
-    extra = min(resto, MAX_PER_ROUTE - MIN_PER_ROUTE)
-    sizes[i] += extra
-    resto -= extra
+    if not small.size and not large.size:
+        break
 
-# 3) Sweep clustering
-centroid = (df["LATITUDE"].mean(), df["LONGITUDE"].mean())
-angles = [atan2(lat-centroid[0], lon-centroid[1]) for lat,lon in coords]
-idx_sorted = [i for i,_ in sorted(enumerate(coords), key=lambda x: angles[x[0]])]
+    # 4a) reatribui pequenos
+    if small.size:
+        idxs = np.nonzero(np.isin(labels, small))[0]
+        D = cdist(coords[idxs], centroids, metric='euclidean')
+        D[:, small] = np.inf
+        labels[idxs] = np.argmin(D, axis=1)
 
-clusters = []
-pos = 0
-for sz in sizes:
-    clusters.append(idx_sorted[pos:pos+sz])
-    pos += sz
+    # 4b) retira excedentes
+    if large.size:
+        for cl in large:
+            idxs_cl = np.where(labels==cl)[0]
+            excess  = sizes[cl] - MAX_SIZE
+            if excess>0:
+                pts      = coords[idxs_cl]
+                dist_own = np.linalg.norm(pts-centroids[cl], axis=1)
+                far     = np.argsort(-dist_own)[:excess]
+                idxs_mv = idxs_cl[far]
+                Dm      = cdist(coords[idxs_mv], centroids, metric='euclidean')
+                Dm[:, cl] = np.inf
+                labels[idxs_mv] = np.argmin(Dm, axis=1)
 
-# 4) Rota interna por vizinho mais próximo
-def nearest_neighbor(cluster):
-    unvisited = set(cluster)
-    route = [cluster[0]]
-    unvisited.remove(cluster[0])
-    while unvisited:
-        last = route[-1]
-        nxt = min(unvisited, key=lambda j: haversine(coords[last], coords[j]))
-        route.append(nxt)
-        unvisited.remove(nxt)
-    return route
+    # 4c) recalcula centróides
+    for cl in range(n_clusters):
+        mem = coords[labels==cl]
+        if mem.size:
+            centroids[cl] = mem.mean(axis=0)
 
-routes = [nearest_neighbor(c) for c in clusters]
+# 5) Anexa ao DataFrame e exporta CSV
+df['cluster'] = labels.astype(int)
+df[['LOJA','cluster']].to_csv('lojas_clusters.csv', index=False)
+print("CSV de clusters salvo em → lojas_clusters.csv")
 
-# 5) Desenha no Folium com FeatureGroups e LayerControl
-m = folium.Map(location=centroid, zoom_start=12)
-colors = [
-    "red","blue","green","purple","orange","darkred",
-    "lightred","beige","darkblue","darkgreen","cadetblue","darkpurple"
-]
+# 6) Prepara cores e FeatureGroups
+unique = sorted(df['cluster'].unique())
+cmap   = plt.get_cmap('tab20', len(unique))
+colors = {u: mcolors.to_hex(cmap(i)) for i,u in enumerate(unique)}
 
-for i, route in enumerate(routes):
-    cor = colors[i % len(colors)]
-    fg = folium.FeatureGroup(name=f"Rota {i+1}")
-    for idx in route:
-        folium.Marker(
-            location=coords[idx],
-            popup=df.loc[idx, "LOJA"],
-            icon=folium.Icon(prefix="fa", icon="shopping-cart", color=cor)
-        ).add_to(fg)
-    folium.PolyLine(
-        locations=[coords[idx] for idx in route],
-        color=cor, weight=3, opacity=0.8
-    ).add_to(fg)
+# 7) Cria mapa e grupos
+m = folium.Map(
+    location=[df['LATITUDE'].mean(), df['LONGITUDE'].mean()],
+    zoom_start=12
+)
+
+feature_groups = {
+    u: folium.FeatureGroup(name=f"Cluster {u}", show=(u!=-1))
+    for u in unique
+}
+for fg in feature_groups.values():
     m.add_child(fg)
 
-# LayerControl padrão
-m.add_child(folium.LayerControl(collapsed=False))
+for _, row in df.iterrows():
+    cl = row['cluster']
+    folium.CircleMarker(
+        location=(row['LATITUDE'], row['LONGITUDE']),
+        radius=6,
+        color=colors[cl],
+        fill=True,
+        fill_color=colors[cl],
+        fill_opacity=0.7,
+        popup=f"{row['LOJA']} (cluster {cl})"
+    ).add_to(feature_groups[cl])
 
-# 6) Botão “Desmarcar Todas”
-template = """
-{% macro html(this,kwargs) %}
-  <div style="position: fixed; top: 10px; right: 130px; z-index:9999;">
-    <button onclick="uncheckAll()" style="padding:5px 10px;">
-      Desmarcar Todas
-    </button>
-  </div>
-  <script>
-    function uncheckAll(){
-      var inputs = document.getElementsByClassName('leaflet-control-layers-selector');
-      for(var i=0; i<inputs.length; i++){
-        if(inputs[i].checked){
-          inputs[i].click();
-        }
-      }
-    }
-  </script>
-{% endmacro %}
-"""
-macro = MacroElement()
-macro._template = Template(template)
-m.get_root().add_child(macro)
-
-# Salva
-m.save("rotas.html")
-print("Mapa salvo em rotas_com_botao.html")
+# 8) Adiciona controle de camadas e salva
+folium.LayerControl(collapsed=False).add_to(m)
+m.save('mapa_clusters.html')
+print(f"{len(unique)} camadas (clusters) disponíveis em → mapa_clusters.html")
